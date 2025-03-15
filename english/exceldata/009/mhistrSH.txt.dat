@@ -47,7 +47,7 @@ Armor
 <<Comm.>>
 Items used in the quest
 Contract fee not refunded
-Returning supply items
+Returning Supply Items
 Status
 ID
 Name
@@ -79,7 +79,7 @@ Failure
 Total Rewards
 Current
 Sum
-Substract
+Subs.
 Points
 Total
 <HUNTER RANK
@@ -150,10 +150,10 @@ Frame Skip
 High Rank Quests
 CLEAR!!
 Urgent Quest
-Weapon Mngmnt.
-Armor Mngmnt.
-Storage Mngmnt.
-My home
+Weapon Mngmnt
+Armor Mngmnt
+Storage Mngmnt
+My Home
 Change Weapon
 Sell Weapon
 Change Armor
@@ -273,8 +273,8 @@ Reward
 Time Lmt
 Area
 Details
-Success Cond.
-Failure Cond.
+Success Cond
+Failure Cond
 F
 z
  
@@ -429,7 +429,7 @@ P. Gypceros
 Fatalis
 Coin
 Ammo
-Leather Set Equip.
+Leather Set Equipped
 Obtained 1000z
 has
 pieces
