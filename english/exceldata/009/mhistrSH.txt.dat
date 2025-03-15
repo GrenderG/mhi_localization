@@ -95,9 +95,9 @@ Lighting
 Controls
 <<On>>
 <<Off>>
-<<Sm.>>
-<<Md.>>
-<<Lg.>>
+<<Low>>
+<<Medium>>
+<<High>>
 Menu
 Item
 Items Delivered
@@ -142,8 +142,8 @@ that are usually not available.
 Hunter Coins are required.
 Quest
 Hunter's Guild
-Talk to Village Chief
-Village Chief's House
+Talk to Chief
+Vill. Chief
 Reset
 Frame Skip
 ？？？？
@@ -165,14 +165,14 @@ Sell Item
 <<Comm. Available>>
 Buy Item
 Sell Item
-Talk to Item Shop
+Talk to Seller
 Item Shop
 Buy Items
-Talk to Shopkeeper
+Talk to Seller
 Hunter's House
 Close
-Weapon
-Armor
+Wea. 
+Arm. 
 Improve
 Craft
 Sell
@@ -203,7 +203,7 @@ Time is up
 Failed to Capture
 Abandoned
 Monster has
-escaped
+Escaped
 Use Item
 Select Ammo
 Combine
@@ -272,17 +272,17 @@ Contract
 Reward
 Time Lmt
 Area
-Details 
+Details
 Success Cond.
 Failure Cond.
 ：
 z
  
-Delivery.
-Slay.
-and
-Hunt.
-Capture.
+ Delivered
+ Slain
+ & 
+ Hunted
+ Captured
 Time's up
 No reward left
 Capture target defeated
@@ -371,141 +371,141 @@ Game not saved.
 Connect to MHi
 website?
 Instructions
-Start Again
+Restart Save
 -
 -
 -
 -
-メンテナンス中です。
-しばらくお待ちください。
-枚です。
-現在のハンターコインは
-ハンターコインを
-枚手に入れた！
+Game on Maintenance.
+Please wait.
+ coins.
+Current HC:
+Hunter Coin
+HC Obtained!
 for SH
-砂漠と沼
-岩地と火山
-決定キーでアイテム破棄
-頭
-翼
-尻尾
-を破壊した！
-コイン入手
+Dst&Swmp
+BG&Vlcno
+Discard Item
+Head
+Wings
+Tail
+ Broken!
+Coin Obt.
 ∞
-あと少しです
-残り時間
-分です
-が逃げ出しました
-ランポス
-白ランポス
-ドスランポス
-ゲネポス
-ドスゲネポス
-イーオス
-ドスイーオス
-アプトノス
-アプケロス
-ランゴスタ
-カンタロス
-モス
-ブルファンゴ
-リオレウス
-リオレイア
-蒼リオレウス
-桜リオレイア
-銀リオレウス
-金リオレイア
-モノブロス
-白モノブロス
-ディアブロス
-黒ディアブロス
-バサルモス
-グラビモス
-黒グラビモス
-イャンクック
-青イャンクック
-ゲリョス
-紫ゲリョス
-ミラボレアス
-コイン
-弾
-レザーセットを装備した
-1000zを入手した
-が
-個
-バージョンアップを行う
-必要があります。
-終了
-現在、別のアプリで
-クエスト中です。
-クエスト中のアプリを
-起動しますか？
-アプリを起動しますか？
-対象のアプリがありません。
-アプリをダウンロードする
-必要があります。
-サイトに接続しますか？
-ハンターズギルドへ
-移行しますか？
-もう一度クエストに
-挑戦しますか？
-が必要です。
-アプリ終了となります。
-通信中･･
-割れてしまった･･
-毒
-眠
-麻
-の
-モンタクサイズを更新した！
-モンタク更新表示
-「あり」にすると戦闘終了後、
-モンタクサイズが更新されたときに更新の
-お知らせが出ます。
+Almost there
+Time Left
+ min.
+escaped
+Velociprey
+W. Velocip.
+Velocidrome
+Genprey
+Gendrome
+Ioprey
+Iodrome
+Aptonoth
+Apceros
+Vespoid
+Hornetaur
+Mosswine
+Bullfango
+Rathalos
+Rathian
+A. Rathal.
+P. Rathian
+S. Rathal.
+G. Rathian
+Monoblos
+W. Monoblos
+Diablos
+B. Diablos
+Basarios
+Gravios
+B. Gravios
+Yian Kut-Ku
+B. Y.Kut-Ku
+Gypceros
+P. Gypceros
+Fatalis
+Coin
+Ammo
+Leather Set Equip.
+Obtained 1000z
+has
+pieces
+Version update
+is needed.
+End
+You are in
+another app.
+Launch app from
+ongoing quest?
+Launch the app?
+Target app not found.
+App download
+is needed.
+Connect to site?
+Move to the
+Hunter's Guild?
+Attempt quest
+again?
+is required.
+App will close.
+Comm...
+Broken...
+Poison
+Sleep
+Para.
+of
+Monster Size updated!
+Show Monster Size
+If set to "On", you
+will be notified when
+size is updated.
 CAPCOM  2006
-森と丘
-ジャングル
-砂漠岩地
-沼地
-岩地
-火山
-後の世の者は、
-この荒々しくも眩しかった
-数世紀を振り返り、
-こう語る。
-大地が、空が、
-そして何よりもそこに住まう人々が、
-最も生きる力に
-満ち溢れていた時代であった、と。
-世界は、今よりもはるかに
-単純にできていた。
-すなわち、
-狩るか、狩られるか。
-明日の糧を得るため、
-己の力量を試すため、
-またあるいは富と名声を手にするため、
-人々はこの地に集う。
-あなたは、
-新米のハンターです。
-目の前に立ち塞がる
-いくつもの難関に
-立ち向かっていくことになります。
-願わくば、
-この世界で過ごす時間が、
-あなたにとって
-忘れられない良き思い出となることを。
-タイトルのみで選択可能です。
-最初からスタートしてセーブを行うまでは
-前回のセーブデータは消えません。
-タイトル以外で設定可能です。
-現在装備中の操作設定を行います。
+FnHills
+Jungle
+Desert
+Swamp
+Btlgrnd
+Volcano
+In the future,
+those who come after us
+will look back at these
+rough yet dazzling centuries
+and speak of them.
+The land, the sky,
+and above all, the people who lived
+there were a time
+full of the greatest vitality.
+The world was, in many ways,
+far simpler than it is now.
+That is to say, it was a world of
+either hunting or being hunted.
+To earn food for tomorrow,
+to test one’s strength,
+or perhaps to gain wealth
+and fame, people gathered here.
+You are a rookie hunter.
+Before you stand
+many obstacles,
+and you will have to
+face them head-on.
+We hope that the time you spend
+in this world becomes a
+good memory for you.
+Only 1 save can exist.
+Until you start and save again
+previous data won't be erased.
+Can be changed outside the title screen.
+Configures current control settings.
 -
 -
 -
 -
 -
-通信エラーにより、
-正常に強化、装備の変更が
-行われませんでした。
-使用したお金や素材は
-元に戻されました。
+Due to a comm. error
+equipment changes
+were not completed.
+The money and used
+mats have been returned.
