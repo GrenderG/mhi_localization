@@ -8,9 +8,9 @@ will be discarded.
 Okay?
 Discard
 obtained items.
-Item combining
-Item after combining
-Success rate 
+Combining
+Resulting item
+Success rate
 ÅHÅHÅHÅHÅHÅHÅHÅH
 ???
 %
@@ -23,7 +23,7 @@ Not enough
 Close
 Completed
 Bag is full
-Obtained
+ Obtained
 Cannot carry more
 Nothing found
 Item Box
@@ -31,14 +31,14 @@ Map
 Quest Check
 Crafting List
 Status
-Check Equipment
+Check Equip.
 Options
 Site Connection
 Abandon Quest
 Save
 Show
 Hide
-Crafting Materials
+Crafting Mats.
 Saving current data.
 Okay?
 Saving...
@@ -69,8 +69,8 @@ Rest
 Depart
 Base Camp
 Å~
-That item can't
-be carried.
+Can't carry more
+of this item.
 No space
 left.
 Quest
@@ -100,7 +100,7 @@ Controls
 <<High>>
 Menu
 Item
-Items Delivered
+ Items Delivered
 Delivery Completed
 Also
 Individual
@@ -194,7 +194,7 @@ Gathering
 Hunter Rank increased!
 HRP will not increase until
 urgent quest is completed.
-Money reward
+Reward 
 z decreased
 Return to Base Camp
 Escaped
@@ -239,7 +239,7 @@ RARE:
 Attack
 Element
 Defense
-Sharpness
+Sharpn.
 (
 )
 Reload
@@ -260,7 +260,7 @@ Sleep
 Disk
 Tranq
 Paint
-Res.
+Res
 None
 Fire
 Water
@@ -290,8 +290,8 @@ Delivery status
 Defeat status
 Capture target
 Full reward
-Remaining reward
-Remaining time
+Reward left
+Time left
 Instructions
 Clear Save
 Start Game
@@ -326,7 +326,7 @@ Sort
 Ål
 Confirm key
 Direction
-Input twice
+x2
 ÇO
 ÇP
 ÇQ
