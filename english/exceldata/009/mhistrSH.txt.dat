@@ -1,10 +1,10 @@
 Store Item
 Discard Dtem
 Obtained Item:
-Item to discard
-Please select
-This item
-will be discarded.
+Item to Discard
+Please Select
+This item will
+be discarded.
 Okay?
 Discard
 obtained items.
@@ -45,8 +45,8 @@ Saving...
 Weapon
 Armor
 <<Comm.>>
-Items used in the quest
-Contract fee not refunded
+Used items and contract
+fee won't be refunded
 Returning Supply Items
 Status
 ID
@@ -56,7 +56,7 @@ P
 Money
 Health
 Stamina
-Broken
+ Broken
 MAX
 ÅüHunt Legend:
 ÅüSize Legend:
@@ -100,7 +100,7 @@ Controls
 <<High>>
 Menu
 Item
- Items Delivered
+ Item(s) Delivered
 Delivery Completed
 Also
 Individual
@@ -264,11 +264,11 @@ Res
 None
 Fire
 Water
-Thunder
-Dragon
+Thndr
+Drgn
 Skills:
 Rank
-Contract
+Contract 
 Reward
 Time Lmt
 Area
@@ -449,7 +449,7 @@ Move to the
 Hunter's Guild?
 Attempt quest
 again?
-is required.
+ is required.
 App will close.
 Comm...
 Broken...
