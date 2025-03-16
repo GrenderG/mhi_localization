@@ -68,7 +68,7 @@
 #SIDE_008
 #LINE
 #COL_FFFF00
-操作方法来自于初始設定。
+操作方法按照初始設定介紹。
 操作方法可以在選項界面的｢操作設定｣
 中進行更改。
 <012>
@@ -306,7 +306,7 @@
 
 #COL_00FFFF
 #LEFT
-・確定、鍵 
+・確定、８鍵 
 #COL_FFFFFF
 #RIGHT
 攻撃
@@ -316,26 +316,26 @@
 　｢劍盾連撃｣
 
 #COL_00FFFF
-・鍵
+・９鍵
 #COL_FFFFFF
 #RIGHT
 回旋斬
 #COL_00FFFF
 #LEFT
-・鍵
+・０鍵
 #COL_FFFFFF
 #RIGHT
 防御
 #COL_00FFFF
 #LEFT
 
-・鍵
+・４６鍵
 #COL_FFFFFF
 #RIGHT
 左右旋轉視角
 #COL_00FFFF
 #LEFT
-・鍵
+・５鍵
 #COL_FFFFFF
 #RIGHT
 回正視角
@@ -373,7 +373,7 @@
 
 #COL_00FFFF
 #LEFT
-・確定、鍵 
+・確定、８鍵 
 #COL_FFFFFF
 #RIGHT
 攻撃
@@ -383,26 +383,26 @@
 　｢横斬｣｢上斬｣
 
 #COL_00FFFF
-・鍵
+・９鍵
 #COL_FFFFFF
 #RIGHT
 横斬
 #COL_00FFFF
 #LEFT
-・鍵
+・０鍵
 #COL_FFFFFF
 #RIGHT
 防御
 
 #COL_00FFFF
 #LEFT
-・鍵
+・４６鍵
 #COL_FFFFFF
 #RIGHT
 左右旋轉視角
 #COL_00FFFF
 #LEFT
-・鍵
+・５鍵
 #COL_FFFFFF
 #RIGHT
 回正視角
@@ -440,7 +440,7 @@
 
 #COL_00FFFF
 #LEFT
-・確定、鍵 
+・確定、８鍵 
 #COL_FFFFFF
 #RIGHT
 攻撃
@@ -451,13 +451,13 @@
 
 #COL_00FFFF
 #LEFT
-・鍵
+・９鍵
 #COL_FFFFFF
 #RIGHT
 突進/停止突進
 #COL_00FFFF
 #LEFT
-・鍵
+・０鍵
 #COL_FFFFFF
 #RIGHT
 防御
@@ -467,13 +467,13 @@
 　可以辺防御辺移動
 
 #COL_00FFFF
-・鍵
+・４６鍵
 #COL_FFFFFF
 #RIGHT
 左右旋轉視角
 #COL_00FFFF
 #LEFT
-・鍵
+・５鍵
 #COL_FFFFFF
 #RIGHT
 回正視角
@@ -511,7 +511,7 @@
 
 #COL_00FFFF
 #LEFT
-・確定、鍵 
+・確定、８鍵 
 #COL_FFFFFF
 #RIGHT
 攻撃
@@ -521,7 +521,7 @@
 　最多３回
 
 #COL_00FFFF
-・鍵
+・９鍵
 #COL_FFFFFF
 #RIGHT
 蓄力攻撃(３階段)
@@ -531,13 +531,13 @@
 　可發動３个不同階段的｢蓄力攻撃｣
 
 #COL_00FFFF
-・鍵
+・４６鍵
 #COL_FFFFFF
 #RIGHT
 左右旋轉視角
 #COL_00FFFF
 #LEFT
-・鍵
+・５鍵
 #COL_FFFFFF
 #RIGHT
 回正視角
@@ -579,7 +579,7 @@
 
 #COL_00FFFF
 #LEFT
-・確定、鍵 
+・確定、８鍵 
 #COL_FFFFFF
 #RIGHT
 攻撃
@@ -588,20 +588,20 @@
 ※向前方發射装填的子彈
 
 #COL_00FFFF
-・鍵
+・９鍵
 #COL_FFFFFF
 #RIGHT
 再装填
 
 #COL_00FFFF
 #LEFT
-・鍵
+・４６鍵
 #COL_FFFFFF
 #RIGHT
 左右旋轉視角
 #COL_00FFFF
 #LEFT
-・鍵
+・５鍵
 #COL_FFFFFF
 #RIGHT
 回正視角
