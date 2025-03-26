@@ -86,17 +86,17 @@ Quest Screen
 #SPASE_010
 #SIDE_020
 *JUMP_300
-①制限時間
+1. Time Limit
 *JUMP_301
-②体力ゲージ
+2. Health Gauge
 *JUMP_302
-③スタミナゲージ
+3. Stamina Gauge
 *JUMP_303
-④モンスター名、体力ゲージ
+4. Monster Name & Health Gauge
 *JUMP_304
-⑤モンスターの状態
+5. Monster Status
 *JUMP_305
-⑥プレイヤーの状態
+6. Player Status
 
 *JUMP_RETURN
 Back
@@ -111,31 +111,31 @@ Skill Descriptions
 #SPASE_010
 #SIDE_020
 *JUMP_400
-体力系
+Health
 *JUMP_401
-スタミナ系
+Stamina
 *JUMP_402
-攻撃系
+Attack
 *JUMP_403
-ガード系
+Guard
 *JUMP_404
-弾追加系
+Ammo
 *JUMP_405
-装填系
+Reload
 *JUMP_406
-状態異常系
+Status
 *JUMP_407
-耐暑・耐寒系
+Heat/Cold
 *JUMP_408
-採取系
+Gathering
 *JUMP_409
-気まぐれ系
+Divine Whim
 *JUMP_410
-運気系
+Good Luck
 *JUMP_411
-調合系
+Combination
 *JUMP_412
-特殊系
+Special
 
 *JUMP_RETURN
 Back
@@ -949,7 +949,7 @@ Back
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-体力系
+Health
 #LINE
 #/TITLE
 #SPASE_010
@@ -994,7 +994,7 @@ Back
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-スタミナ系
+Stamina
 #LINE
 #/TITLE
 #SPASE_010
@@ -1035,7 +1035,7 @@ Back
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-攻撃系
+Attack
 #LINE
 #/TITLE
 #SPASE_010
@@ -1072,7 +1072,7 @@ Back
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-ガード系
+Guard
 #LINE
 #/TITLE
 #SPASE_010
@@ -1108,7 +1108,7 @@ Back
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-弾追加系
+Ammo
 #LINE
 #/TITLE
 #SPASE_010
@@ -1160,7 +1160,7 @@ Back
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-装填系
+Reload
 #LINE
 #/TITLE
 #SPASE_010
@@ -1196,7 +1196,7 @@ Back
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-状態異常系
+Status
 #LINE
 #/TITLE
 #SPASE_010
@@ -1252,7 +1252,7 @@ Back
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-耐暑・耐寒系
+Heat/Cold
 #LINE
 #/TITLE
 #SPASE_010
@@ -1287,7 +1287,7 @@ Back
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-採取系
+Gathering
 #LINE
 #/TITLE
 #SPASE_010
@@ -1311,7 +1311,7 @@ Back
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-気まぐれ系
+Divine Whim
 #LINE
 #/TITLE
 #SPASE_010
@@ -1335,7 +1335,7 @@ Back
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-運気系
+Good Luck
 #LINE
 #/TITLE
 #SPASE_010
@@ -1359,7 +1359,7 @@ Back
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-調合系
+Combination
 #LINE
 #/TITLE
 #SPASE_010
@@ -1381,7 +1381,7 @@ Back
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-特殊系
+Special
 #LINE
 #/TITLE
 #SPASE_010
