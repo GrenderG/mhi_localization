@@ -149,19 +149,19 @@ About Urgent Quests
 #/TITLE
 #SPASE_010
 #SIDE_020
-緊急クエストは
-次のランクのクエストを受ける為に
-必ずクリアする必要のある
-クエストです。
+Urgent Quests
+are mandatory missions
+required to unlock the
+next rank of quests.
 
-緊急クエストは
-そのランクのクエストを
-全てクリアしたら発生します。
-ただし、そのランクのクエストが
-｢ＨＲ２－３｣の場合、
-プレイヤーのハンターランクは
-３でないと
-緊急クエストを受ける事ができません。
+Urgent Quests
+appear after 
+clearing all
+quests in that rank.
+However, for HR2-3 quests,
+your Hunter Rank
+must be 3 to accept
+the Urgent Quest.
 
 *JUMP_RETURN
 Return
@@ -175,16 +175,16 @@ Unlocking Higher Rank Quests
 #/TITLE
 #SPASE_010
 #SIDE_020
-次のランクのクエストを
-プレイするには緊急クエストを
-クリアする必要があります。
+To unlock the next rank's
+quests, the Urgent Quest
+must be cleared.
 
-ただし、次のランクのクエストが
-｢ＨＲ４｣の場合、
-プレイヤーのハンターランクは
-４もしくはそれ以上でないと
-次のランクのクエストを
-受ける事ができません。
+However, for HR4
+quests, your Hunter
+Rank must be 4 or
+higher first in
+order to accept the
+next rank's quest.
 
 *JUMP_RETURN
 Return
@@ -193,16 +193,16 @@ Return
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-Unlocking Higher Rank Quests
+Post-Quest Save Confirmation
 #LINE
 #/TITLE
 #SPASE_010
 #SIDE_020
-｢オプション｣内の
-｢オートセーブ｣の設定を
-｢なし｣にして頂くと
-確認画面が出なくなり、
-オートセーブもされなくなります。
+If you set "Auto-save" to "Off"
+in the "Options" menu, the
+confirmation prompt will no
+longer appear, and auto-saving
+will be disabled.
 
 *JUMP_RETURN
 Return
@@ -216,12 +216,12 @@ Escaping from Monsters
 #/TITLE
 #SPASE_010
 #SIDE_020
-モンスターと遭遇したら
-戦闘フィールドの端に向かって走り、
-壁に接触すると
-ゲージがたまっていきます。
-そして、そのゲージが満タンになると
-逃走成功となります。
+When you encounter a monster,
+run toward the edge of the combat
+zone. Upon touching the wall. a
+gauge will start filling up.
+Once the gauge is completely full,
+you will successfully escape.
 
 *JUMP_RETURN
 Return
@@ -235,22 +235,22 @@ Capturing Monsters
 #/TITLE
 #SPASE_010
 #SIDE_020
-捕獲対象になっているモンスターを
-捕獲するにはまずはダメージを与えて
-弱らせる必要があります。
-捕獲対象モンスターは弱ると時々、
-足を引きずる行動をします。
+In order to capture a monster,
+you must first weaken it by
+inflicting damage on it.
+When a monster is weakened,
+it will sometimes limp.
 
-捕獲対象モンスターが弱った時、
-｢捕獲用麻酔玉｣
-もしくは｢捕獲用麻酔弾｣を
-２発連続で当てると捕獲となります。
+Once the monster is weakened,
+hit it with two consecutive
+"Tranq Bombs" or "Tranq Shots"
+to successfully capture it.
 
-ただし、｢捕獲用麻酔玉｣もしくは
-｢捕獲用麻酔弾｣を１発当てて、
-その後、捕獲対象モンスターに
-逃げられた場合、
-当てた１発は無効となります。
+However, if you land only one
+"Tranq Bomb" or "Tranq Shot"
+and the monster escapes,
+the first hit will not count,
+and you'll need to start over.
 
 *JUMP_RETURN
 Return
@@ -264,15 +264,15 @@ About Powercharm & Armorcharm
 #/TITLE
 #SPASE_010
 #SIDE_020
-力の護符や守りの護符は
-アイテムポーチに入れておく事で、
-攻撃力や防御力が上がります。
-倉庫に置いていても、
-その効果はありません。
+Powercharm and Armorcharm
+increase your attack and
+defense when carried in
+your item bag. They have no
+effect if placed in storage.
 
-アイテムポーチには
-それぞれ１つずつしか所持する事が
-できません。
+You can only carry one of
+each charm in your item
+bag at a time.
 
 *JUMP_RETURN
 Return
@@ -287,33 +287,33 @@ Controls: Sword and Shield
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-・方向キー
+・D-pad
 #COL_FFFFFF
 #RIGHT
-移動
+Move
 #COL_00FFFF
 #LEFT
-・方向キーを２回入力
+・D-pad×2
 #COL_FFFFFF
 #RIGHT
-緊急回避
+Evade
 #COL_00FFFF
 #LEFT
-・＃キー
+・# Key
 #COL_FFFFFF
 #RIGHT
-ダッシュ
+Sprint
 
 #COL_00FFFF
 #LEFT
-・決定、キー 
+・Confirm ( Key)
 #COL_FFFFFF
 #RIGHT
-攻撃
+Attack
 #COL_FF7F50
 #LEFT
-※連続で入力すると｢前斬り｣｢横斬り｣
-　｢盾と剣のコンボ｣が発動
+※Press repeatedly for a combo:
+　Forward, Side and Final Slash
 
 #COL_00FFFF
 ・キー
