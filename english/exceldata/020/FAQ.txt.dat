@@ -40,7 +40,7 @@ Capturing Monsters
 About Powercharm & Armorcharm
 
 *JUMP_RETURN
-Back
+Return
 <011>
 #TITLE
 #COL_FFFFFF
@@ -63,7 +63,7 @@ Hammer
 Bowgun
 
 *JUMP_RETURN
-Back
+Return
 #SPASE_054
 #SIDE_008
 #LINE
@@ -99,7 +99,7 @@ Quest Screen
 6. Player Status
 
 *JUMP_RETURN
-Back
+Return
 <013>
 #TITLE
 #COL_FFFFFF
@@ -138,7 +138,7 @@ Combination
 Special
 
 *JUMP_RETURN
-Back
+Return
 <100>
 #TITLE
 #COL_FFFFFF
@@ -164,7 +164,7 @@ About Urgent Quests
 緊急クエストを受ける事ができません。
 
 *JUMP_RETURN
-Back
+Return
 <101>
 #TITLE
 #COL_FFFFFF
@@ -187,7 +187,7 @@ Unlocking Higher Rank Quests
 受ける事ができません。
 
 *JUMP_RETURN
-Back
+Return
 <102>
 #TITLE
 #COL_FFFFFF
@@ -205,7 +205,7 @@ Unlocking Higher Rank Quests
 オートセーブもされなくなります。
 
 *JUMP_RETURN
-Back
+Return
 <103>
 #TITLE
 #COL_FFFFFF
@@ -224,7 +224,7 @@ Escaping from Monsters
 逃走成功となります。
 
 *JUMP_RETURN
-Back
+Return
 <104>
 #TITLE
 #COL_FFFFFF
@@ -253,7 +253,7 @@ Capturing Monsters
 当てた１発は無効となります。
 
 *JUMP_RETURN
-Back
+Return
 <105>
 #TITLE
 #COL_FFFFFF
@@ -275,7 +275,7 @@ About Powercharm & Armorcharm
 できません。
 
 *JUMP_RETURN
-Back
+Return
 <200>
 #TITLE
 #COL_FFFFFF
@@ -342,7 +342,7 @@ Controls: Sword and Shield
 
 #LEFT
 *JUMP_RETURN
-Back
+Return
 <201>
 #TITLE
 #COL_FFFFFF
@@ -409,7 +409,7 @@ Controls: Greatsword
 
 #LEFT
 *JUMP_RETURN
-Back
+Return
 <202>
 #TITLE
 #COL_FFFFFF
@@ -480,7 +480,7 @@ Controls: Lance
 
 #LEFT
 *JUMP_RETURN
-Back
+Return
 <203>
 #TITLE
 #COL_FFFFFF
@@ -548,7 +548,7 @@ Controls: Hammer
 
 #COL_FFFFFF
 *JUMP_RETURN
-Back
+Return
 <204>
 #TITLE
 #COL_FFFFFF
@@ -612,7 +612,7 @@ Controls: Bowgun
 
 #COL_FFFFFF
 *JUMP_RETURN
-Back
+Return
 <300>
 #TITLE
 #COL_FFFFFF
@@ -637,7 +637,7 @@ Back
 
 #COL_FFFFFF
 *JUMP_RETURN
-Back
+Return
 <301>
 #TITLE
 #COL_FFFFFF
@@ -664,7 +664,7 @@ Back
 
 #COL_FFFFFF
 *JUMP_RETURN
-Back
+Return
 <302>
 #TITLE
 #COL_FFFFFF
@@ -690,7 +690,7 @@ Back
 
 #COL_FFFFFF
 *JUMP_RETURN
-Back
+Return
 <303>
 #TITLE
 #COL_FFFFFF
@@ -714,7 +714,7 @@ Back
 
 #COL_FFFFFF
 *JUMP_RETURN
-Back
+Return
 <304>
 #TITLE
 #COL_FFFFFF
@@ -801,7 +801,7 @@ Back
 
 #COL_FFFFFF
 *JUMP_RETURN
-Back
+Return
 <305>
 #TITLE
 #COL_FFFFFF
@@ -943,7 +943,7 @@ Back
 
 #COL_FFFFFF
 *JUMP_RETURN
-Back
+Return
 <400>
 #TITLE
 #COL_FFFFFF
@@ -988,7 +988,7 @@ Health
 回復量が通常よりアップする。
 
 *JUMP_RETURN
-Back
+Return
 <401>
 #TITLE
 #COL_FFFFFF
@@ -1029,7 +1029,7 @@ Stamina
 通常より５０増加される。
 
 *JUMP_RETURN
-Back
+Return
 <402>
 #TITLE
 #COL_FFFFFF
@@ -1066,7 +1066,7 @@ Attack
 武器の斬れ味が１段階良くなる。
 
 *JUMP_RETURN
-Back
+Return
 <403>
 #TITLE
 #COL_FFFFFF
@@ -1102,7 +1102,7 @@ Guard
 ３０％軽減する。
 
 *JUMP_RETURN
-Back
+Return
 <404>
 #TITLE
 #COL_FFFFFF
@@ -1154,7 +1154,7 @@ Ammo
 拡散弾全レベルが使用可能になる。
 
 *JUMP_RETURN
-Back
+Return
 <405>
 #TITLE
 #COL_FFFFFF
@@ -1190,7 +1190,7 @@ Reload
 #COL_FFFFFF
 
 *JUMP_RETURN
-Back
+Return
 <406>
 #TITLE
 #COL_FFFFFF
@@ -1246,7 +1246,7 @@ Status
 気絶状態にならなくなる。
 
 *JUMP_RETURN
-Back
+Return
 <407>
 #TITLE
 #COL_FFFFFF
@@ -1281,7 +1281,7 @@ Heat/Cold
 影響を受けなくなる。
 
 *JUMP_RETURN
-Back
+Return
 <408>
 #TITLE
 #COL_FFFFFF
@@ -1305,7 +1305,7 @@ Gathering
 拾える回数が２回増える。
 
 *JUMP_RETURN
-Back
+Return
 <409>
 #TITLE
 #COL_FFFFFF
@@ -1329,7 +1329,7 @@ Divine Whim
 壊れにくくなる。
 
 *JUMP_RETURN
-Back
+Return
 <410>
 #TITLE
 #COL_FFFFFF
@@ -1353,7 +1353,7 @@ Good Luck
 受け取り確率がアップする。
 
 *JUMP_RETURN
-Back
+Return
 <411>
 #TITLE
 #COL_FFFFFF
@@ -1375,7 +1375,7 @@ Combination
 調合の成功率が１０％上昇する。
 
 *JUMP_RETURN
-Back
+Return
 <412>
 #TITLE
 #COL_FFFFFF
@@ -1426,5 +1426,5 @@ Special
 マップが表示される。
 
 *JUMP_RETURN
-Back
+Return
 <FIN>

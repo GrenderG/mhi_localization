@@ -31,7 +31,7 @@ Map
 Check Quest
 Crafting List
 Status
-Check Equip.
+Check Eqmnt
 Options
 Site Connection
 Abandon Quest
@@ -44,7 +44,7 @@ Okay?
 Saving...
 Weapon
 Armor
-<<Comm.>>
+<<Ntwrk>>
 Used items and contract
 fee won't be refunded
 Returning Supply Items
@@ -126,24 +126,24 @@ it will begin from village
 and equipment and items
 will be reverted.
 error : 
-You can change your
-equipment and items.
-You can take on various
-quests appropriae to your
-HR.
+Manage your equipment
+and items.
+Take on various quests
+appropriate to your
+Hunter Rank.
 Craft and Improve weapons.
 Craft and Improve armor.
-You can purchase items for
-gathering and combat.
-You can gather information
+Purchase items for gathering
+and combat.
+Gather information from
 from the villagers.
-You can purchase rare items
-that are usually not available.
+Purchase rare items not
+easily available anywhere.
 Hunter Coins are required.
 Quest
 Hunter's Guild
 Talk to Chief
-Vill. Chief
+Vllge Chief
 Reset
 Frame Skip
 ÅHÅHÅHÅH
@@ -153,7 +153,7 @@ Urgent Quest
 Weapon Mngmnt
 Armor Mngmnt
 Storage Mngmnt
-My Home
+My House
 Change Weapon
 Sell Weapon
 Change Armor
@@ -162,7 +162,7 @@ Store
 Withdraw
 Sell Item
  
-<<Comm. Available>>
+<<Ntwrk Rqd>>
 Buy Item
 Sell Item
 Talk to Seller
@@ -181,7 +181,7 @@ Shop
 Wandering Hunter
 Village Girl
 Wise Felyne
-Kokotto Village
+Kokoto Street
 Yes
 No
 Quit
@@ -208,7 +208,7 @@ Use Item
 Select Ammo
 Combine
 Check Items
-Sword & Shield
+Sword&Shield
 Greatsword
 Lance
 Hammer
@@ -232,7 +232,7 @@ HC
 Åy
 Åz
 /
-Eqmt. Type:
+Eqmnt Type:
 LV
 QtyÅ~
 RARE:
@@ -397,7 +397,7 @@ Time Left
  min.
 escaped
 Velociprey
-W. Velocip.
+Wht Velprey
 Velocidrome
 Genprey
 Gendrome
@@ -411,21 +411,21 @@ Mosswine
 Bullfango
 Rathalos
 Rathian
-A. Rathal.
-P. Rathian
-S. Rathal.
-G. Rathian
+Azr Rathlos
+Pnk Rathian
+Slv Rathlos
+Gld Rathian
 Monoblos
-W. Monoblos
+Wht Monobls
 Diablos
-B. Diablos
+Blk Diablos
 Basarios
 Gravios
-B. Gravios
+Blk Gravios
 Yian Kut-Ku
-B. Y.Kut-Ku
+Bl Y Kut-Ku
 Gypceros
-P. Gypceros
+Prpl Gypcrs
 Fatalis
 Coins
 Ammo
@@ -435,10 +435,10 @@ has
 pieces
 Version update
 is needed.
-End
-You are in
-another app.
-Launch app from
+Exit
+Quest in progress
+in another app.
+Launch app with
 ongoing quest?
 Launch the app?
 Target app not found.
@@ -451,7 +451,7 @@ Attempt quest
 again?
  is required.
 App will close.
-Comm...
+Connecting
 Broken...
 Poison
 Sleep
@@ -469,32 +469,32 @@ Desert
 Swamp
 Btlgrnd
 Volcano
-Those in the future
-will look back
-and tell tales of these rough
-yet dazzling centuries.
-Of the land, the sky,
-and yet above all, it was also a time
-full of people that lived
-to their fullest.
-The world was
-far more simpler than it is now.
-That is to say...
-You either hunt, or be hunted.
-To bring food to tomorrow's table.
-To test your strength.
-Or perhaps to earn a fortune or fame.
-People gather round to these lands.
+Those of later ages
+will look back upon
+these fierce and dazzling
+centuries and speak thus:
+An era when the land, the sky,
+and most of all, its people,
+were brimming with the very
+essence of life.
+The world was far more
+simpler than it is now.
+There were but two choices...
+To hunt... or be hunted.
+To secure tomorrow's sustenance,
+to test one's own strength,
+or to claim riches and renown,
+people gathered in this land.
 You are:
 a rookie hunter.
 Ahead of you lie many
 challenges that you will
 have to confront head-on.
-We hope that during your time
-here in this world,
-you will create truly
-unforgettable memories.
-Only 1 save can exist.
+May the time you spend in
+this world become a memory
+you will never forget:
+A MEMORY OF GREATNESS.
+Only 1 save can exist at once.
 Until you start and save again
 previous data won't be erased.
 Can be changed outside the title screen.
