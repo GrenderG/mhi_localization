@@ -187,17 +187,17 @@ No
 Quit
 Combine
 Requested monsters
-slain!
-Slay
-Capture
-Gathering
+!
+ slain
+ captured
+Loot
 Hunter Rank increased!
 HRP will not increase until
 urgent quest is completed.
 Reward 
 z decreased
 Return to Base Camp
-Escaped
+Gone
 Quest Failed
 Time is up
 Failed to Capture
@@ -217,9 +217,9 @@ Blademaster
 Gunner
 Rusty
 Dull
-Normal
+Average
 Sharp
-Exceptional
+Excellent
 Supreme
 Slow
 Slightly Slow
@@ -303,7 +303,7 @@ Pickaxe
 Bugnet
 Fish Bait
 Ammo
-Nothing found
+ not found
 Only areas between ÅkÅl can be set.
 Press key to assign it.
 Usable keys are 0-9, *, and #.
@@ -395,7 +395,7 @@ Coin Obt.
 Almost there
 Time Left
  min.
-escaped
+ escaped
 Velociprey
 Wht Velprey
 Velocidrome
