@@ -73,14 +73,14 @@ Can't carry more
 of this item.
 No space
 left.
-Quest
+Quest 
 Success
 Failure
-Total Rewards
-Current
-Sum
-Subs.
-Points
+Total
+Current 
+Added
+Lost
+ Pts
 Total
 <HUNTER RANK
 >
@@ -186,10 +186,10 @@ Yes
 No
 Quit
 Combine
-Requested monsters
+Requested monster(s) 
 !
- slain
- captured
+slain
+captured
 Loot
 Hunter Rank increased!
 HRP will not increase until
