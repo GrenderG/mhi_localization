@@ -306,7 +306,7 @@ Sprint
 
 #COL_00FFFF
 #LEFT
-・Confirm ( Key)
+・Confirm, 8 Keys
 #COL_FFFFFF
 #RIGHT
 Attack
@@ -316,29 +316,29 @@ Attack
 　Forward, Side and Final Slash
 
 #COL_00FFFF
-・キー
+・9 Key
 #COL_FFFFFF
 #RIGHT
-回転斬り
+Slash Attack
 #COL_00FFFF
 #LEFT
-・キー
+・0 Key
 #COL_FFFFFF
 #RIGHT
-ガード
+Guard
 #COL_00FFFF
 #LEFT
 
-・キー
+・4, 6 Keys
 #COL_FFFFFF
 #RIGHT
-カメラ左右回転
+Rotate Camera
 #COL_00FFFF
 #LEFT
-・キー
+・5 Key
 #COL_FFFFFF
 #RIGHT
-視点合わせ
+Focus Camera
 
 #LEFT
 *JUMP_RETURN
@@ -354,58 +354,58 @@ Controls: Greatsword
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-・方向キー
+・D-pad
 #COL_FFFFFF
 #RIGHT
-移動
+Move
 #COL_00FFFF
 #LEFT
-・方向キーを２回入力
+・D-pad×2
 #COL_FFFFFF
 #RIGHT
-緊急回避
+Evade
 #COL_00FFFF
 #LEFT
-・＃キー
+・# Key
 #COL_FFFFFF
 #RIGHT
-ダッシュ
+Sprint
 
 #COL_00FFFF
 #LEFT
-・決定、キー 
+・Confirm, 8 Keys
 #COL_FFFFFF
 #RIGHT
-攻撃
+Attack
 #COL_FF7F50
 #LEFT
-※連続で入力すると｢縦斬り｣
-　｢なぎ払い｣｢斬り上げ｣が発動
+※Press repeatedly for a combo:
+　Overhead, Sweep and Upswing
 
 #COL_00FFFF
-・キー
+・9 Key
 #COL_FFFFFF
 #RIGHT
-なぎ払い
+Wide Sweep
 #COL_00FFFF
 #LEFT
-・キー
+・0 Key
 #COL_FFFFFF
 #RIGHT
-ガード
+Guard
 
 #COL_00FFFF
 #LEFT
-・キー
+・4, 6 Keys
 #COL_FFFFFF
 #RIGHT
-カメラ左右回転
+Rotate Camera
 #COL_00FFFF
 #LEFT
-・キー
+・5 Key
 #COL_FFFFFF
 #RIGHT
-視点合わせ
+Focus Camera
 
 #LEFT
 *JUMP_RETURN
@@ -421,62 +421,62 @@ Controls: Lance
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-・方向キー
+・D-pad
 #COL_FFFFFF
 #RIGHT
-移動
+Move
 #COL_00FFFF
 #LEFT
-・方向キーを２回入力
+・D-pad×2
 #COL_FFFFFF
 #RIGHT
-緊急回避
+Evade
 #COL_00FFFF
 #LEFT
-・＃キー
+・# Key
 #COL_FFFFFF
 #RIGHT
-ダッシュ
+Sprint
 
 #COL_00FFFF
 #LEFT
-・決定、キー 
+・Confirm, 8 Keys
 #COL_FFFFFF
 #RIGHT
-攻撃
+Attack
 #COL_FF7F50
 #LEFT
-※連続で入力すると｢中段突き｣が
-　３回まで発動
+※Press repeatedly for a combo:
+　Mid-Thrust up to 3 times
 
 #COL_00FFFF
 #LEFT
-・キー
+・9 Key
 #COL_FFFFFF
 #RIGHT
-突進/突進止め
+Charge/Charge Stop
 #COL_00FFFF
 #LEFT
-・キー
+・0 Key
 #COL_FFFFFF
 #RIGHT
-ガード
+Guard
 #COL_FF7F50
 #LEFT
-※｢ガード｣中に方向キーを入力すると
-　ガードしながら移動が可能
+※While guarding, you can move by
+　inputting directional keys
 
 #COL_00FFFF
-・キー
+・4, 6 Keys
 #COL_FFFFFF
 #RIGHT
-カメラ左右回転
+Rotate Camera
 #COL_00FFFF
 #LEFT
-・キー
+・5 Key
 #COL_FFFFFF
 #RIGHT
-視点合わせ
+Focus Camera
 
 #LEFT
 *JUMP_RETURN
@@ -492,59 +492,59 @@ Controls: Hammer
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-・方向キー
+・D-pad
 #COL_FFFFFF
 #RIGHT
-移動
+Move
 #COL_00FFFF
 #LEFT
-・方向キーを２回入力
+・D-pad×2
 #COL_FFFFFF
 #RIGHT
-緊急回避
+Evade
 #COL_00FFFF
 #LEFT
-・＃キー
+・# Key
 #COL_FFFFFF
 #RIGHT
-ダッシュ
+Sprint
 
 #COL_00FFFF
 #LEFT
-・決定、キー 
+・Confirm, 8 Keys
 #COL_FFFFFF
 #RIGHT
-攻撃
+Attack
 #COL_FF7F50
 #LEFT
-※連続で入力すると｢大縦振り｣が
-　３回まで発動
+※Press repeatedly for a combo:
+　Vertical Swing up to 3 times
 
 #COL_00FFFF
-・キー
+・9 Key
 #COL_FFFFFF
 #RIGHT
-ため攻撃(３段階)
+Charge Attack (3 Levels)
 #COL_FF7F50
 #LEFT
-※入力した長さに応じて
-　｢ため攻撃｣が３段階発動
+※Charge Attack has up to 3
+　levels based on hold time
 
 #COL_00FFFF
-・キー
+・4, 6 Keys
 #COL_FFFFFF
 #RIGHT
-カメラ左右回転
+Rotate Camera
 #COL_00FFFF
 #LEFT
-・キー
+・5 Key
 #COL_FFFFFF
 #RIGHT
-視点合わせ
+Focus Camera
 
 #COL_FF7F50
 #LEFT
-※ガードはありません
+※No guard ability
 
 #COL_FFFFFF
 *JUMP_RETURN
@@ -560,55 +560,55 @@ Controls: Bowgun
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-・方向キー
+・D-pad
 #COL_FFFFFF
 #RIGHT
-移動
+Move
 #COL_00FFFF
 #LEFT
-・方向キーを２回入力
+・D-pad×2
 #COL_FFFFFF
 #RIGHT
-緊急回避
+Evade
 #COL_00FFFF
 #LEFT
-・＃キー
+・# Key
 #COL_FFFFFF
 #RIGHT
-ダッシュ
+Sprint
 
 #COL_00FFFF
 #LEFT
-・決定、キー 
+・Confirm, 8 Keys
 #COL_FFFFFF
 #RIGHT
-攻撃
+Attack
 #COL_FF7F50
 #LEFT
-※装填している弾を前方へ発射
+※Fires loaded ammo forward
 
 #COL_00FFFF
-・キー
+・9 Key
 #COL_FFFFFF
 #RIGHT
-リロード
+Reload
 
 #COL_00FFFF
 #LEFT
-・キー
+・4, 6 Keys
 #COL_FFFFFF
 #RIGHT
-カメラ左右回転
+Rotate Camera
 #COL_00FFFF
 #LEFT
-・キー
+・5 Key
 #COL_FFFFFF
 #RIGHT
-視点合わせ
+Focus Camera
 
 #COL_FF7F50
 #LEFT
-※ガードはありません
+※No guard ability
 
 #COL_FFFFFF
 *JUMP_RETURN
@@ -618,7 +618,7 @@ Return
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-①制限時間
+1. Time Limit
 #LINE
 #CENTER
 *IMG_12
@@ -627,13 +627,13 @@ Return
 #/TITLE
 #SPASE_010
 #SIDE_020
-クエストの制限時間を表すタイマー。
-｢白の針｣が｢橙の針｣にきたら
-クエスト失敗となります。
+Clock showing the quest time limit.
+When the "white needle" reaches the
+"orange needle", quest will fail.
 
-正確な残り時間を確認したい時は、
-｢メニュー｣の｢クエスト確認｣より
-確認ができます。
+To check the exact remaining time,
+Simply open the "Menu" and press
+"Quest Status".
 
 #COL_FFFFFF
 *JUMP_RETURN
