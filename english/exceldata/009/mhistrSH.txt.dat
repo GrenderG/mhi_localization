@@ -21,10 +21,10 @@ Required items
 Not enough
 -Close Box-
 Close
- Completed
+ completed
 Bag is full
- Obtained
-Cannot carry more
+ obtained
+ can't be carried
 Nothing found
 Item Box
 Map
@@ -102,8 +102,8 @@ Menu
 Items
  Item(s) Delivered
 Delivery Completed
-Also
-Individual
+Only 
+ left
 Health recovered!
 Gathering Point
 Insect Point
@@ -278,14 +278,14 @@ Failure Cond
 ÅF
 z
  
- Delivered
+ Delivd
  Slain
  & 
  Hunted
- Captured
+ Captrd
 Time's up
 No reward left
-Capture target defeated
+Target defeated
 Delivery status
 Defeat status
 Capture target
@@ -423,7 +423,7 @@ Basarios
 Gravios
 Blk Gravios
 Yian Kut-Ku
-Bl Y Kut-Ku
+Blue Kut-Ku
 Gypceros
 Prpl Gypcrs
 Fatalis
