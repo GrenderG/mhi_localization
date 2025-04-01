@@ -29,7 +29,7 @@ Nothing found
 Item Box
 Map
 Quest Status
-Crafting List
+Combine List
 Status
 Check Eqmnt
 Options
@@ -38,7 +38,7 @@ Abandon Quest
 Save
 Show
 Not 
-Crafting Mats.
+Mix Items
 Saving current data.
 Okay?
 Saving...
@@ -278,7 +278,7 @@ Failure Cond
 ÅF
 z
  
- Delivd
+ Delivered
  Slain
  & 
  Hunted
@@ -390,7 +390,7 @@ Head
 Wings
 Tail
  Broken!
-Coin Obt.
+Got Coins
 Åá
 Almost there
 Time Left
