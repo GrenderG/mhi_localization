@@ -15,18 +15,18 @@ def unpack(input_file, output_folder):
         with open(input_file, 'rb') as f:
             i_byte = f.read(1)
             if not i_byte:
-                raise ValueError("invalid input file: header error")
+                raise ValueError("invalid input file: broken header")
             i = ord(i_byte)
 
             if i == 0 or file_size <= (i * 2 + 1):
-                raise ValueError(f"invalid block data（i = {i} ，block size = {file_size}）")
+                raise ValueError(f"invalid block data (i = {i} , block size = {file_size})")
 
             unpack_list = []
             total_blocks_size = 0
             for _ in range(i):
                 block_bytes = f.read(2)
                 if len(block_bytes) != 2:
-                    raise ValueError("invalid input file: block size should be 2 Bytes")
+                    raise ValueError("invalid input file: cannot get 2 bytes for each block size")
                 
                 (block_size,) = struct.unpack('<H', block_bytes)
                 
@@ -39,7 +39,7 @@ def unpack(input_file, output_folder):
             header_size = 1 + i * 2
             expected_size = header_size + total_blocks_size
             if expected_size > file_size:
-                raise ValueError(f"input file size check error: expect size: {expected_size} , actual size: {file_size}")
+                raise ValueError(f"input file size check error, expect size: {expected_size} , actual size: {file_size}")
 
             os.makedirs(output_folder, exist_ok=True)
             
@@ -49,7 +49,7 @@ def unpack(input_file, output_folder):
                 
                 data = f.read(size)
                 if len(data) != size:
-                    raise ValueError(f"{filename} is missing some data, expect size: {size} , actual size: {len(data)}")
+                    raise ValueError(f"cannot get enough data for {filename} , expect size: {size} , actual size: {len(data)}")
                 
                 with open(output_path, 'wb') as out_file:
                     out_file.write(data)
@@ -60,7 +60,7 @@ def unpack(input_file, output_folder):
         print("unpack done")
 
     except Exception as e:
-        print(f"[unpack error] {str(e)}\ntrace：{traceback.format_exc()}")
+        print(f"[unpack error] {str(e)}\ntrace: {traceback.format_exc()}")
         exit(1)
 
 def repack(input_folder, output_file):
@@ -86,7 +86,7 @@ def repack(input_folder, output_file):
         dat_files.sort(key=lambda x: x)
         i = len(dat_files)
         if i > 255:
-            raise ValueError(f"too many .dat files（{i}/255）")
+            raise ValueError(f"too many .dat files({i}/255)")
 
         repack_sizes = []
         total_data = 0
@@ -94,7 +94,7 @@ def repack(input_folder, output_file):
             file_path = os.path.join(input_folder, fname)
             size = os.path.getsize(file_path)
             if size == 0 or size > 0xFFFF:
-                raise ValueError(f"invalid file size： {fname} ({size} byte(s))")
+                raise ValueError(f"invalid file size: {fname} ({size} byte(s))")
             repack_sizes.append(size)
             total_data += size
 
@@ -110,16 +110,16 @@ def repack(input_folder, output_file):
 
         expected_size = 1 + 2*i + total_data
         if (actual := os.path.getsize(output_file)) != expected_size:
-            raise ValueError(f"repack check failed: expect size: {expected_size} , actual size: {actual}")
+            raise ValueError(f"repack check failed, expect size: {expected_size} , actual size: {actual}")
 
         print("repack done")
 
     except Exception as e:
-        print(f"[repack error] {str(e)}\ntrace：{traceback.format_exc()}")
+        print(f"[repack error] {str(e)}\ntrace: {traceback.format_exc()}")
         exit(1)
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="MHi tool for unpacking/repacking files")
+    parser = argparse.ArgumentParser(description="MHi tool for unpacking/repacking common data files (v1.1)")
     subparsers = parser.add_subparsers(dest='command', required=True)
     
     unpack_parser = subparsers.add_parser('unpack')
@@ -138,5 +138,5 @@ if __name__ == '__main__':
         elif args.command == 'repack':
             repack(args.input_folder, args.output_file)
     except Exception as e:
-        print(f"EXIT：{str(e)}\n{traceback.format_exc()}")
+        print(f"EXIT: {str(e)}\n{traceback.format_exc()}")
         exit(1)

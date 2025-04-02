@@ -31,7 +31,7 @@ def unpack(input_file, output_folder):
                 (block_size,) = struct.unpack('<H', block_bytes)
                 
                 if block_size == 0:
-                    raise ValueError("存在零长度块")
+                    raise ValueError("块大小为零")
                 
                 unpack_list.append(block_size)
                 total_blocks_size += block_size
@@ -119,7 +119,7 @@ def repack(input_folder, output_file):
         exit(1)
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="MHi文件打包解包工具")
+    parser = argparse.ArgumentParser(description="MHi文件打包解包工具 (v1.1)")
     subparsers = parser.add_subparsers(dest='command', required=True)
     
     unpack_parser = subparsers.add_parser('unpack')
