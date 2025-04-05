@@ -643,7 +643,7 @@ Return
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-②体力ゲージ
+2. Health Gauge
 #LINE
 #CENTER
 *IMG_12
@@ -652,15 +652,15 @@ Return
 #/TITLE
 #SPASE_010
 #SIDE_020
-プレイヤーの体力を表すゲージ。
+Gauge showing the player's health.
 
-緑ゲージは現在の体力、
-赤ゲージは自然回復可能な体力を
-表します。
+The green gauge is your current
+health, and the red gauge is the
+health that can recover naturally.
 
-体力は攻撃を受けたり、
-｢毒状態｣や｢暑い状態｣で
-減って行きます。
+Your health goes down when you
+take hits, or from being
+"poisoned" or "overheated".
 
 #COL_FFFFFF
 *JUMP_RETURN
@@ -670,7 +670,7 @@ Return
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-③スタミナゲージ
+3. Stamina Gauge
 #LINE
 #CENTER
 *IMG_12
@@ -679,14 +679,14 @@ Return
 #/TITLE
 #SPASE_010
 #SIDE_020
-プレイヤーのスタミナを表すゲージ。
+Gauge showing the player's stamina.
 
-スタミナはダッシュや緊急回避などで
-減っていきますが自然回復します。
+Stamina decreases from sprinting
+and dodging but recovers naturally.
 
-最大値は時間が経過すると
-減っていき、｢寒い状態｣だと
-その減っていく速度が速くなります。
+The maximum stamina gradually
+decreases over time, and drops
+faster when "cold".
 
 #COL_FFFFFF
 *JUMP_RETURN
@@ -696,7 +696,7 @@ Return
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-④モンスター名、体力ゲージ
+4. Monster Name & Health Gauge
 #LINE
 #CENTER
 *IMG_12
@@ -705,12 +705,12 @@ Return
 #/TITLE
 #SPASE_010
 #SIDE_020
-モンスターの名前、
-モンスターの体力を表すゲージ。
-ダメージを与えると減っていきます。
+A gauge showing the monster's name
+and its health. It decreases as
+you deal damage.
 
-赤い矢印はモンスターのいる方向を
-表します。
+The red arrow indicates the
+direction the monster is in.
 
 #COL_FFFFFF
 *JUMP_RETURN
@@ -720,7 +720,7 @@ Return
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-⑤モンスターの状態
+5. Monster Status
 #LINE
 #CENTER
 *IMG_12
@@ -729,75 +729,75 @@ Return
 #/TITLE
 #SPASE_010
 #SIDE_020
-ここにはモンスターの様々な状態が
-表示されます。
+Here, various monster statuses
+are displayed.
 
 #COL_FFFF00
-▼状態一覧（モンスター）
+▼ Status List (Monsters)
 
 #CENTER
 *IMG_00
 #LEFT
 #COL_00FFFF
-毒状態
+Poisoned
 #COL_FFFFFF
-体力が少しずつ減っていきます。
-毒属性の武器で
-一定以上のダメージを与える、
-もしくは｢毒玉｣｢毒弾｣を
-何発か当てる事で
-モンスターを毒状態にできます。
+Health gradually decreases over
+time. You can inflict the Poisoned
+status on a monster by dealing
+enough damage with poison-element
+weapons, or by using "Poison Bombs"
+or "Poison Ammo".
 
 #CENTER
 *IMG_01
 #LEFT
 #COL_00FFFF
-麻痺状態
+Paralyzed
 #COL_FFFFFF
-その場に倒れ、
-行動が一切不能になります。
-麻痺属性の武器で
-一定以上のダメージを与える、
-もしくは｢シビレ玉｣｢麻痺弾｣を
-何発か当てる事で
-モンスターを麻痺状態にできます。
+The monster becomes completely
+immobilized. You can inflict the
+Paralyzed status on a monster by
+dealing a certain amount of damage
+with a paralysis-element weapons,
+or by hitting them with a
+"Shock Bomb" or "Stun Ammo".
 
 #CENTER
 *IMG_02
 #LEFT
 #COL_00FFFF
-睡眠状態
+Asleep
 #COL_FFFFFF
-その場に倒れ、
-行動が一切不能になります。
-睡眠属性の武器で
-一定以上のダメージを与える、
-もしくは｢眠り玉｣｢睡眠弾｣を
-何発か当てる事で
-モンスターを睡眠状態にできます。
+The monster becomes completely
+immobilized. You can inflict the
+Asleep status on a monster by
+dealing a certain amount of damage
+with sleep-element weapons, or by
+hitting them with a "Sleep Bomb"
+or "Sleep Ammo".
 
 #CENTER
 *IMG_03
 #LEFT
 #COL_00FFFF
-気絶状態
+Stunned
 #COL_FFFFFF
-身動きが取れなくなったり、
-混乱状態で動きまわります。
-｢閃光玉｣を使用する事で
-モンスターを気絶状態にできます。
+The monster becomes unable to move
+or wanders around confused. You can
+inflict the Stunned status on a
+monster by using "Flash Bombs".
 
 #CENTER
 *IMG_11
 #LEFT
 #COL_00FFFF
-怒り状態
+Enraged
 #COL_FFFFFF
-モンスターが怒り状態になると
-表示されます。
-この時、モンスターの
-攻撃力、防御力、俊敏性が
-アップします。
+This appears when the monster
+enters Enraged status. During
+this state, the monster's  
+attack power, defense,
+and agility all increase.
 
 #COL_FFFFFF
 *JUMP_RETURN
@@ -807,7 +807,7 @@ Return
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-⑥プレイヤーの状態
+6. Player Status
 #LINE
 #CENTER
 *IMG_12
@@ -816,17 +816,17 @@ Return
 #/TITLE
 #SPASE_010
 #SIDE_020
-ここにはプレイヤーの様々な状態が
-表示されます
+Here, various player statuses
+are displayed.
 
 #COL_FFFF00
-▼状態一覧（プレイヤー）
+▼ Status List (Player)
 
 #CENTER
 *IMG_00
 #LEFT
 #COL_00FFFF
-毒状態
+Poisoned
 #COL_FFFFFF
 体力が少しずつ減っていきます。
 ｢解毒薬｣などで回復できます。
@@ -835,7 +835,7 @@ Return
 *IMG_01
 #LEFT
 #COL_00FFFF
-麻痺状態
+Paralyzed
 #COL_FFFFFF
 その場に倒れ、
 行動が一切不能になります。
@@ -845,7 +845,7 @@ Return
 *IMG_02
 #LEFT
 #COL_00FFFF
-睡眠状態
+Asleep
 #COL_FFFFFF
 その場に倒れ、
 行動が一切不能になります。
@@ -856,7 +856,7 @@ Return
 *IMG_03
 #LEFT
 #COL_00FFFF
-気絶状態
+Stunned
 #COL_FFFFFF
 連続してダメージ受けた際に陥り、
 身動きが取れなくなります。
