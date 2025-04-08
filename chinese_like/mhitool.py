@@ -118,7 +118,7 @@ def repack(input_folder, output_file):
         print(f"[打包错误] {str(e)}\n追踪：{traceback.format_exc()}")
         exit(1)
 
-def analyze(input_file, output_file):
+def parse(input_file, output_file):
 
     try:
         with open(args.output_file, 'w') as f:
@@ -205,11 +205,11 @@ if __name__ == '__main__':
     repack_parser.add_argument('input_folder', help='包含待打包文件的文件夹路径')
     repack_parser.add_argument('output_file', help='生成的MHi包文件路径')
 
-    analyze_parser = subparsers.add_parser('analyze',
+    parse_parser = subparsers.add_parser('parse',
         help='分析MHi通用文件并输出',
         description='尝试根据MHi通用文件(非包文件)结构信息，分析并生成拆分相关数据的文本文件')
-    analyze_parser.add_argument('input_file', help='待分析的MHi通用文件路径')
-    analyze_parser.add_argument('output_file', help='分析文件输出文件路径')
+    parse_parser.add_argument('input_file', help='待分析的MHi通用文件路径')
+    parse_parser.add_argument('output_file', help='分析文件输出文件路径')
 
     args = parser.parse_args()
 
@@ -218,8 +218,8 @@ if __name__ == '__main__':
             unpack(args.input_file, args.output_folder)
         elif args.command == 'repack':
             repack(args.input_folder, args.output_file)
-        elif args.command == 'analyze':
-            analyze(args.input_file, args.output_file)
+        elif args.command == 'parse':
+            parse(args.input_file, args.output_file)
     except Exception as e:
         print(f"程序终止：{str(e)}\n{traceback.format_exc()}")
         exit(1)

@@ -118,7 +118,7 @@ def repack(input_folder, output_file):
         print(f"[repack error] {str(e)}\ntrace: {traceback.format_exc()}")
         exit(1)
 
-def analyze(input_file, output_file):
+def parse(input_file, output_file):
 
     try:
         with open(args.output_file, 'w') as f:
@@ -182,15 +182,15 @@ def analyze(input_file, output_file):
                         S.append(hex_str)
                     
                     f_out.write("\t".join(S) + "\n")
-        print("MHi common data file analyzed")
+        print("MHi common data file parsed")
     except Exception as e:
-        print(f"analyze error: {str(e)}")
+        print(f"parse error: {str(e)}")
         with open(args.output_file, 'w') as f:
             pass
         return
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="MHi common package/data file unpack/repack/analyze tool (v1.2)")
+    parser = argparse.ArgumentParser(description="MHi common package/data file unpack/repack/parse tool (v1.2)")
     subparsers = parser.add_subparsers(dest='command', required=True)
 
     unpack_parser = subparsers.add_parser('unpack', 
@@ -205,11 +205,11 @@ if __name__ == '__main__':
     repack_parser.add_argument('input_folder', help='input folder which contains .dat files waiting to be repacked')
     repack_parser.add_argument('output_file', help='output MHi package file')
 
-    analyze_parser = subparsers.add_parser('analyze',
-        help='analyze MHi common data file and output',
-        description='try to analyze file using MHi common data file(not package file) structure and output all the data to text file')
-    analyze_parser.add_argument('input_file', help='MHi file waiting to be analyzed')
-    analyze_parser.add_argument('output_file', help='output text file')
+    parse_parser = subparsers.add_parser('parse',
+        help='parse MHi common data file and output',
+        description='try to parse file using MHi common data file(not package file) structure and output all the data to text file')
+    parse_parser.add_argument('input_file', help='MHi file waiting to be parsed')
+    parse_parser.add_argument('output_file', help='output text file')
 
     args = parser.parse_args()
 
@@ -218,8 +218,8 @@ if __name__ == '__main__':
             unpack(args.input_file, args.output_folder)
         elif args.command == 'repack':
             repack(args.input_folder, args.output_file)
-        elif args.command == 'analyze':
-            analyze(args.input_file, args.output_file)
+        elif args.command == 'parse':
+            parse(args.input_file, args.output_file)
     except Exception as e:
         print(f"EXIT: {str(e)}\n{traceback.format_exc()}")
         exit(1)
