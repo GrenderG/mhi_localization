@@ -118,25 +118,109 @@ def repack(input_folder, output_file):
         print(f"[repack error] {str(e)}\ntrace: {traceback.format_exc()}")
         exit(1)
 
+def analyze(input_file, output_file):
+
+    try:
+        with open(args.output_file, 'w') as f:
+            pass
+
+        with open(args.input_file, 'rb') as f_in:
+            p_byte = f_in.read(1)
+            if not p_byte:
+                raise ValueError("invalid input_file: empty file")
+            
+            p = ord(p_byte)
+            if p == 0:
+                raise ValueError("invalid input_file: first byte is 0x00")
+
+            data = f_in.read(2 * p)
+            if len(data) != 2 * p:
+                raise ValueError("invalid input_file: incomplete header")
+
+            A = []
+            B = []
+            C = 0
+            for i in range(p):
+                a = ord(data[2*i:2*i+1])
+                b = ord(data[2*i+1:2*i+2])
+                
+                if a > 2:
+                    raise ValueError(f"invalid input_file: type value of A{i+1} {a} is greater than 2")
+                if b == 0:
+                    raise ValueError(f"invalid input_file: length value of B{i+1} is 0")
+                
+                A.append(a)
+                B.append(b)
+                C += b
+
+            f_in.seek(0, os.SEEK_END)
+            T = f_in.tell()
+            remaining = T - (2 * p + 1)
+            
+            if remaining <= 0 or remaining % C != 0:
+                raise ValueError("invalid input_file: file size error")
+
+            E = [f"{A[i]},{B[i]}" for i in range(p)]
+            
+            with open(args.output_file, 'w') as f_out:
+                f_out.write("\t".join(E) + "\n")
+
+            f_in.seek(2 * p + 1)
+            iterations = remaining // C
+            
+            with open(args.output_file, 'a') as f_out:
+                for _ in range(iterations):
+                    S = []
+                    for b in B:
+                        chunk = f_in.read(b)
+                        if len(chunk) != b:
+                            with open(args.output_file, 'w') as f:
+                                pass
+                            raise ValueError("invalid input_file: incomplete data")
+                        
+                        hex_str = "".join([f"{byte:02X}" for byte in chunk])
+                        S.append(hex_str)
+                    
+                    f_out.write("\t".join(S) + "\n")
+        print("MHi common data file analyzed")
+    except Exception as e:
+        print(f"analyze error: {str(e)}")
+        with open(args.output_file, 'w') as f:
+            pass
+        return
+
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="MHi tool for unpacking/repacking common data files (v1.1)")
+    parser = argparse.ArgumentParser(description="MHi common package/data file unpack/repack/analyze tool (v1.2)")
     subparsers = parser.add_subparsers(dest='command', required=True)
-    
-    unpack_parser = subparsers.add_parser('unpack')
-    unpack_parser.add_argument('input_file')
-    unpack_parser.add_argument('output_folder')
-    
-    repack_parser = subparsers.add_parser('repack')
-    repack_parser.add_argument('input_folder')
-    repack_parser.add_argument('output_file')
-    
+
+    unpack_parser = subparsers.add_parser('unpack', 
+        help='unpack MHi package file',
+        description='try to unpack file to destination folder using MHi package file format')
+    unpack_parser.add_argument('input_file', help='input MHi package file')
+    unpack_parser.add_argument('output_folder', help='output folder for unpacked files')
+
+    repack_parser = subparsers.add_parser('repack',
+        help='repack files to MHi package file',
+        description='use <number>.dat for filenames inside the input folder, repack will use the same order')
+    repack_parser.add_argument('input_folder', help='input folder which contains .dat files waiting to be repacked')
+    repack_parser.add_argument('output_file', help='output MHi package file')
+
+    analyze_parser = subparsers.add_parser('analyze',
+        help='analyze MHi common data file and output',
+        description='try to analyze file using MHi common data file(not package file) structure and output all the data to text file')
+    analyze_parser.add_argument('input_file', help='MHi file waiting to be analyzed')
+    analyze_parser.add_argument('output_file', help='output text file')
+
     args = parser.parse_args()
-    
+
     try:
         if args.command == 'unpack':
             unpack(args.input_file, args.output_folder)
         elif args.command == 'repack':
             repack(args.input_folder, args.output_file)
+        elif args.command == 'analyze':
+            analyze(args.input_file, args.output_file)
     except Exception as e:
         print(f"EXIT: {str(e)}\n{traceback.format_exc()}")
         exit(1)
+

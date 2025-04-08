@@ -118,25 +118,108 @@ def repack(input_folder, output_file):
         print(f"[打包错误] {str(e)}\n追踪：{traceback.format_exc()}")
         exit(1)
 
+def analyze(input_file, output_file):
+
+    try:
+        with open(args.output_file, 'w') as f:
+            pass
+
+        with open(args.input_file, 'rb') as f_in:
+            p_byte = f_in.read(1)
+            if not p_byte:
+                raise ValueError("无效的文件格式: 文件为空")
+            
+            p = ord(p_byte)
+            if p == 0:
+                raise ValueError("无效的文件格式: 首字节为 0x00")
+
+            data = f_in.read(2 * p)
+            if len(data) != 2 * p:
+                raise ValueError("无效的文件格式: 文件头不完整")
+
+            A = []
+            B = []
+            C = 0
+            for i in range(p):
+                a = ord(data[2*i:2*i+1])
+                b = ord(data[2*i+1:2*i+2])
+                
+                if a > 2:
+                    raise ValueError(f"无效的文件格式: A{i+1}的值{a}大于2")
+                if b == 0:
+                    raise ValueError(f"无效的文件格式: B{i+1}的值为0")
+                
+                A.append(a)
+                B.append(b)
+                C += b
+
+            f_in.seek(0, os.SEEK_END)
+            T = f_in.tell()
+            remaining = T - (2 * p + 1)
+            
+            if remaining <= 0 or remaining % C != 0:
+                raise ValueError("无效的文件格式: 文件大小不符合要求")
+
+            E = [f"{A[i]},{B[i]}" for i in range(p)]
+            
+            with open(args.output_file, 'w') as f_out:
+                f_out.write("\t".join(E) + "\n")
+
+            f_in.seek(2 * p + 1)
+            iterations = remaining // C
+            
+            with open(args.output_file, 'a') as f_out:
+                for _ in range(iterations):
+                    S = []
+                    for b in B:
+                        chunk = f_in.read(b)
+                        if len(chunk) != b:
+                            with open(args.output_file, 'w') as f:
+                                pass
+                            raise ValueError("无效的文件格式: 数据不完整")
+                        
+                        hex_str = "".join([f"{byte:02X}" for byte in chunk])
+                        S.append(hex_str)
+                    
+                    f_out.write("\t".join(S) + "\n")
+        print("MHi通用文件格式解析完毕")
+    except Exception as e:
+        print(f"错误: {str(e)}")
+        with open(args.output_file, 'w') as f:
+            pass
+        return
+
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="MHi文件打包解包工具 (v1.1)")
+    parser = argparse.ArgumentParser(description="MHi文件打包解包与分析工具 (v1.2)")
     subparsers = parser.add_subparsers(dest='command', required=True)
-    
-    unpack_parser = subparsers.add_parser('unpack')
-    unpack_parser.add_argument('input_file')
-    unpack_parser.add_argument('output_folder')
-    
-    repack_parser = subparsers.add_parser('repack')
-    repack_parser.add_argument('input_folder')
-    repack_parser.add_argument('output_file')
-    
+
+    unpack_parser = subparsers.add_parser('unpack', 
+        help='解包MHi包文件到指定文件夹',
+        description='尝试将MHi使用的包文件解包到指定目录')
+    unpack_parser.add_argument('input_file', help='输入的MHi包文件路径')
+    unpack_parser.add_argument('output_folder', help='解包输出的目标文件夹路径')
+
+    repack_parser = subparsers.add_parser('repack',
+        help='将文件夹重新打包为MHi包文件',
+        description='待打包文件名需使用数字, 后缀为.dat, 将按照数字顺序进行打包')
+    repack_parser.add_argument('input_folder', help='包含待打包文件的文件夹路径')
+    repack_parser.add_argument('output_file', help='生成的MHi包文件路径')
+
+    analyze_parser = subparsers.add_parser('analyze',
+        help='分析MHi通用文件并输出',
+        description='尝试根据MHi通用文件(非包文件)结构信息，分析并生成拆分相关数据的文本文件')
+    analyze_parser.add_argument('input_file', help='待分析的MHi通用文件路径')
+    analyze_parser.add_argument('output_file', help='分析文件输出文件路径')
+
     args = parser.parse_args()
-    
+
     try:
         if args.command == 'unpack':
             unpack(args.input_file, args.output_folder)
         elif args.command == 'repack':
             repack(args.input_folder, args.output_file)
+        elif args.command == 'analyze':
+            analyze(args.input_file, args.output_file)
     except Exception as e:
         print(f"程序终止：{str(e)}\n{traceback.format_exc()}")
         exit(1)
