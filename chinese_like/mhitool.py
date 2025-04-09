@@ -19,7 +19,7 @@ def unpack(input_file, output_folder):
             i = ord(i_byte)
 
             if i == 0 or file_size <= (i * 2 + 1):
-                raise ValueError(f"无效文件头（i={i}，文件大小={file_size}）")
+                raise ValueError(f"无效文件头(i={i}, 文件大小={file_size})")
 
             unpack_list = []
             total_blocks_size = 0
@@ -39,7 +39,7 @@ def unpack(input_file, output_folder):
             header_size = 1 + i * 2
             expected_size = header_size + total_blocks_size
             if expected_size > file_size:
-                raise ValueError(f"大小校验失败：预期{expected_size}字节，实际{file_size}字节")
+                raise ValueError(f"大小校验失败: 预期{expected_size}字节, 实际{file_size}字节")
 
             os.makedirs(output_folder, exist_ok=True)
             
@@ -49,18 +49,18 @@ def unpack(input_file, output_folder):
                 
                 data = f.read(size)
                 if len(data) != size:
-                    raise ValueError(f"{filename} 数据不完整，预期{size}字节，实际{len(data)}字节")
+                    raise ValueError(f"{filename} 数据不完整, 预期{size}字节, 实际{len(data)}字节")
                 
                 with open(output_path, 'wb') as out_file:
                     out_file.write(data)
 
             if remaining := f.read():
-                print(f"警告：输入文件存在{len(remaining)}字节冗余数据")
+                print(f"警告: 输入文件存在{len(remaining)}字节冗余数据")
 
         print("解包成功")
 
     except Exception as e:
-        print(f"[解包错误] {str(e)}\n追踪：{traceback.format_exc()}")
+        print(f"[解包错误] {str(e)}\n追踪: {traceback.format_exc()}")
         exit(1)
 
 def repack(input_folder, output_file):
@@ -81,12 +81,12 @@ def repack(input_folder, output_file):
                 dat_files.append( (index, fname) )
 
         if not dat_files:
-            raise ValueError("未找到有效.dat文件")
+            raise ValueError("未找到有效的.dat文件")
         
         dat_files.sort(key=lambda x: x)
         i = len(dat_files)
         if i > 255:
-            raise ValueError(f"文件数量超过限制（{i}/255）")
+            raise ValueError(f"文件数量超过限制({i}/255)")
 
         repack_sizes = []
         total_data = 0
@@ -94,7 +94,7 @@ def repack(input_folder, output_file):
             file_path = os.path.join(input_folder, fname)
             size = os.path.getsize(file_path)
             if size == 0 or size > 0xFFFF:
-                raise ValueError(f"无效文件大小：{fname} ({size}字节)")
+                raise ValueError(f"无效文件大小: {fname} ({size}字节)")
             repack_sizes.append(size)
             total_data += size
 
@@ -110,12 +110,12 @@ def repack(input_folder, output_file):
 
         expected_size = 1 + 2*i + total_data
         if (actual := os.path.getsize(output_file)) != expected_size:
-            raise ValueError(f"打包校验失败：预期{expected_size}字节，实际{actual}字节")
+            raise ValueError(f"打包校验失败: 预期{expected_size}字节, 实际{actual}字节")
 
         print("打包成功")
 
     except Exception as e:
-        print(f"[打包错误] {str(e)}\n追踪：{traceback.format_exc()}")
+        print(f"[打包错误] {str(e)}\n追踪: {traceback.format_exc()}")
         exit(1)
 
 def parse(input_file, output_file):
@@ -184,13 +184,114 @@ def parse(input_file, output_file):
                     f_out.write("\t".join(S) + "\n")
         print("MHi通用文件格式解析完毕")
     except Exception as e:
-        print(f"错误: {str(e)}")
+        print(f"[分析错误] {str(e)}\n追踪: {traceback.format_exc()}")
         with open(args.output_file, 'w') as f:
             pass
         return
 
+def validate_input_line(line):
+    parts = line.strip().split('\t')
+    if not parts:
+        return None, "无效的输入文件格式: 找不到制表符分隔的内容"
+    
+    n = len(parts)
+    if n > 255:
+        return None, "无效的输入文件格式: 总列数n大于255"
+    
+    a_list = []
+    b_list = []
+    
+    for part in parts:
+        try:
+            a, b = part.split(',')
+            a = int(a)
+            b = int(b)
+            
+            if a > 2:
+                return None, f"无效的输入文件格式: A值{a}大于2"
+            if b == 0 or b > 255:
+                return None, f"无效的输入文件格式: B值{b}不在1-255范围内"
+            
+            a_list.append(a)
+            b_list.append(b)
+        except ValueError:
+            return None, f"无效的输入文件格式: '{part}'不是有效的A,B格式"
+    
+    return (n, a_list, b_list), None
+
+def validate_hex_line(line, expected_n, b_values):
+    parts = line.strip().split('\t')
+    if len(parts) != expected_n:
+        return None, f"无效的输入文件格式: 期望{expected_n}个十六进制字符串, 实际得到{len(parts)}个"
+    
+    hex_data = []
+    
+    for i, (part, b) in enumerate(zip(parts, b_values)):
+        if len(part) != 2 * b:
+            return None, f"无效的输入文件格式: 字符串'{part}'长度应为{2*b} , 实际为{len(part)}"
+        
+        try:
+            bytes.fromhex(part)
+        except ValueError:
+            return None, f"无效的输入文件格式: 字符串'{part}'包含非十六进制字符"
+        
+        hex_data.append(part)
+    
+    return hex_data, None
+
+def process_file(input_file, output_file):
+    try:
+        with open(input_file, 'r') as infile, open(output_file, 'wb') as outfile:
+            first_line = infile.readline()
+            if not first_line:
+                return "无效的输入文件格式: 文件为空"
+            
+            result, error = validate_input_line(first_line)
+            if error:
+                return error
+            
+            n, a_list, b_list = result
+            
+            outfile.write(bytes([n]))
+            
+            for a, b in zip(a_list, b_list):
+                outfile.write(bytes([a]))
+                outfile.write(bytes([b]))
+            
+            line_number = 1
+            for line in infile:
+                line_number += 1
+                line = line.strip()
+                if not line:
+                    break
+                
+                hex_data, error = validate_hex_line(line, n, b_list)
+                if error:
+                    return f"{error} (第{line_number}行)"
+                
+                for hex_str in hex_data:
+                    outfile.write(bytes.fromhex(hex_str))
+            
+            return None
+        
+    except IOError as e:
+        return f"文件操作错误: {str(e)}"
+
+def build(input_file, output_file):
+    
+    error = process_file(args.input_file, args.output_file)
+    
+    if error:
+        if os.path.exists(args.output_file):
+            os.remove(args.output_file)
+        print(f"[重构错误]: {error}")
+        print("无效的输入文件格式")
+        exit(1)
+    else:
+        print(f"MHi通用文件重构完毕")
+
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="MHi文件打包解包与分析工具 (v1.2)")
+    parser = argparse.ArgumentParser(description="MHi文件打包/解包/分析/重构工具 (v1.5)")
     subparsers = parser.add_subparsers(dest='command', required=True)
 
     unpack_parser = subparsers.add_parser('unpack', 
@@ -207,9 +308,15 @@ if __name__ == '__main__':
 
     parse_parser = subparsers.add_parser('parse',
         help='分析MHi通用文件并输出',
-        description='尝试根据MHi通用文件(非包文件)结构信息，分析并生成拆分相关数据的文本文件')
+        description='尝试根据MHi通用文件(非包文件)结构信息, 分析并生成拆分相关数据的文本文件')
     parse_parser.add_argument('input_file', help='待分析的MHi通用文件路径')
     parse_parser.add_argument('output_file', help='分析文件输出文件路径')
+
+    build_parser = subparsers.add_parser('build',
+        help='通过文本文件重构MHi通用文件',
+        description='尝试根据MHi通用文件(非包文件)结构信息, 对包含相关数据的文本文件进行重新构建')
+    build_parser.add_argument('input_file', help='含有效信息的待重构文本文件')
+    build_parser.add_argument('output_file', help='重构后的MHi通用文件输出文件路径')
 
     args = parser.parse_args()
 
@@ -220,6 +327,8 @@ if __name__ == '__main__':
             repack(args.input_folder, args.output_file)
         elif args.command == 'parse':
             parse(args.input_file, args.output_file)
+        elif args.command == 'build':
+            build(args.input_file, args.output_file)
     except Exception as e:
-        print(f"程序终止：{str(e)}\n{traceback.format_exc()}")
+        print(f"程序终止: {str(e)}\n{traceback.format_exc()}")
         exit(1)
