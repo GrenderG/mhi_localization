@@ -129,7 +129,7 @@ Heat/Cold
 *JUMP_408
 Gathering
 *JUMP_409
-Divine Whim
+Whimsical
 *JUMP_410
 Good Luck
 *JUMP_411
@@ -828,8 +828,8 @@ are displayed.
 #COL_00FFFF
 Poisoned
 #COL_FFFFFF
-体力が少しずつ減っていきます。
-｢解毒薬｣などで回復できます。
+Your health will slowly decrease.
+Cure it by using "Antidote" items.
 
 #CENTER
 *IMG_01
@@ -837,9 +837,9 @@ Poisoned
 #COL_00FFFF
 Paralyzed
 #COL_FFFFFF
-その場に倒れ、
-行動が一切不能になります。
-時間が経つと回復します。
+You collapse on the spot,
+unable to take any actions.
+You'll recover with time.
 
 #CENTER
 *IMG_02
@@ -847,10 +847,10 @@ Paralyzed
 #COL_00FFFF
 Asleep
 #COL_FFFFFF
-その場に倒れ、
-行動が一切不能になります。
-攻撃を受けるもしくは、
-時間が経つと回復します。
+You collapse on the spot,
+unable to take any actions.
+You'll recover with time
+or when receiving hits.
 
 #CENTER
 *IMG_03
@@ -858,88 +858,88 @@ Asleep
 #COL_00FFFF
 Stunned
 #COL_FFFFFF
-連続してダメージ受けた際に陥り、
-身動きが取れなくなります。
-時間が経つと回復しますが、
-｢決定キー｣｢方向キー｣｢数字キー｣の
-いずれかを入力すると
-回復までの時間がはやくなります。
+Triggered by rapid hits,
+you'll be immobilized.
+Recovers over time,
+but pressing any key
+(confirm/direction/number)
+speeds up recovery.
 
 #CENTER
 *IMG_04
 #LEFT
 #COL_00FFFF
-攻撃力アップ
+Attack Boost
 #COL_FFFFFF
-｢怪力の種｣や｢鬼人薬｣によって
-プレイヤーの攻撃力が
-アップしている状態を表します。
+This indicates that the player's
+attack power has been increased
+with "Power Seed" or "Demondrug".
 
 #CENTER
 *IMG_05
 #LEFT
 #COL_00FFFF
-防御力アップ
+Defense Boost
 #COL_FFFFFF
-｢忍耐の種｣や｢硬化薬｣によって
-プレイヤーの防御力が
-アップしている状態を表します。
+This indicates that the player's
+defense has been increased with
+"Armor Seed" or "Armorskin".
 
 #CENTER
 *IMG_06
 #LEFT
 #COL_00FFFF
-寒い状態
+Cold Status
 #COL_FFFFFF
-洞窟などの寒いフィールドにいる時に
-表示されます。
-時間の経過とともにスタミナが
-減っていきますが、
-｢ホットドリンク｣で
-緩和する事ができます。
+This message appears when
+you are in a cold area,
+such as a cave.
+Your stamina will decrease over
+time, but you can ease this by
+drinking a "Hot Drink".
 
 #CENTER
 *IMG_07
 #LEFT
 #COL_00FFFF
-暑い状態
+Hot Status
 #COL_FFFFFF
-砂漠などの暑いフィールドにいる時に
-表示されます。
-時間の経過とともに
-体力が減っていきますが、
-｢クーラードリンク｣で
-緩和する事ができます。
+This message appears when
+you are in a hot area,
+such as a desert.
+Your health will decrease over
+time, but you can ease this by
+drinking a "Cold Drink".
 
 #CENTER
 *IMG_08
 #LEFT
 #COL_00FFFF
-視線
+Eyecon
 #COL_FFFFFF
-モンスターが
-そのフィールドにいる事を示します。
+Indicates that a monster
+is present in the area.
 
 #CENTER
 *IMG_09
 #LEFT
 #COL_00FFFF
-視線(ドス系以上)
+Eyecon (Strong)
 #COL_FFFFFF
-ドス系以上のモンスターが
-そのフィールドにいる事を示します。
+Indicates that a strong monster
+is present in the area.
 
 #CENTER
 *IMG_10
 #LEFT
 #COL_00FFFF
-煙幕
+Smoke Screen
 #COL_FFFFFF
-プレイヤーがモンスターに
-遭遇しづらい状態である事を
-示します。
-｢けむり玉｣を使用する事により
-この状態になります。
+This indicates that the player is
+in a state where monsters won't
+easily notice them.
+This state is entered by using a
+"Smoke Bomb".
 
 #COL_FFFFFF
 *JUMP_RETURN
@@ -955,37 +955,37 @@ Health
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-◆体力＋１０
+◆ Health +10
 #COL_FFFFFF
-体力の上限が＋１０される。
+Increases maximum health by 10.
 
 #COL_00FFFF
-◆体力＋２０
+◆ Health +20
 #COL_FFFFFF
-体力の上限が＋２０される。
+Increases maximum health by 20.
 
 #COL_00FFFF
-◆体力＋３０
+◆ Health +30
 #COL_FFFFFF
-体力の上限が＋３０される。
+Increases maximum health by 30.
 
 #COL_00FFFF
-◆ダメージ回復速度＋１
+◆ Recovery Speed +1
 #COL_FFFFFF
-体力ゲージの赤部分の
-回復速度が少し上がる。
+Slightly boosts recovery of the
+red portion of the health gauge.
 
 #COL_00FFFF
-◆ダメージ回復速度＋２
+◆ Recovery Speed +2
 #COL_FFFFFF
-体力ゲージの赤部分の
-回復速度が上がる。
+Boosts recovery of the red portion
+of the health gauge.
 
 #COL_00FFFF
-◆体力回復アイテム強化
+◆ Recovery Items Strengthened
 #COL_FFFFFF
-すべての体力回復系アイテムの
-回復量が通常よりアップする。
+Boosts all healing
+item effectiveness.
 
 *JUMP_RETURN
 Return
@@ -1000,33 +1000,33 @@ Stamina
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-◆はらへり倍加
+◆ Double Hunger
 #COL_FFFFFF
-スタミナの最大値が減少するまでの
-時間が通常より２倍速くなる。
+Maximum stamina decreases
+twice as fast as usual.
 
 #COL_00FFFF
-◆はらへり半減
+◆ Hunger Halved
 #COL_FFFFFF
-スタミナの最大値が減少するまでの
-時間が通常より２倍遅くなる。
+Maximum stamina decreases
+twice as slowly as usual.
 
 #COL_00FFFF
-◆はらへり無効
+◆ Hunger Negated
 #COL_FFFFFF
-スタミナの最大値が減少しなくなる。
+Maximum stamina will not decrease.
 
 #COL_00FFFF
-◆まんぷく＋１
+◆ Eating +1
 #COL_FFFFFF
-肉系アイテムのスタミナ上昇量が
-通常より２５増加される。
+Meat items increase stamina by 25
+points more than usual.
 
 #COL_00FFFF
-◆まんぷく＋２
+◆ Eating +2
 #COL_FFFFFF
-肉系アイテムのスタミナ上昇量が
-通常より５０増加される。
+Meat items increase stamina by 50
+points more than usual.
 
 *JUMP_RETURN
 Return
@@ -1041,29 +1041,29 @@ Attack
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-◆攻撃力ＵＰ【小】
+◆ Attack Up (Small)
 #COL_FFFFFF
-攻撃力がわずかに上昇する。
+Attack power rises.
 
 #COL_00FFFF
-◆攻撃力ＵＰ【中】
+◆ Attack Up (Medium)
 #COL_FFFFFF
-攻撃力が少し上昇する。
+Attack power rises slightly more.
 
 #COL_00FFFF
-◆攻撃力ＵＰ【大】
+◆ Attack Up (Large)
 #COL_FFFFFF
-攻撃力が上昇する。
+Attack power rises even more.
 
 #COL_00FFFF
-◆通常弾攻撃力ＵＰ
+◆ Normal S Up
 #COL_FFFFFF
-通常弾の威力が１．３倍になる。
+Boosts Normal Ammo damage by 30%.
 
 #COL_00FFFF
-◆斬れ味＋１
+◆ Sharpness Up
 #COL_FFFFFF
-武器の斬れ味が１段階良くなる。
+Sharpness level increases by 1.
 
 *JUMP_RETURN
 Return
@@ -1078,28 +1078,28 @@ Guard
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-◆ガード性能－１
+◆ Guard -1
 #COL_FFFFFF
-モンスターの攻撃をガードした時の
-ダメージが少し増加する。
+Slightly increases damage taken
+when guarding against attacks.
 
 #COL_00FFFF
-◆ガード性能＋１
+◆ Guard +1
 #COL_FFFFFF
-モンスターの攻撃をガードした時の
-ダメージを少し軽減する。
+Slightly reduces damage taken
+when guarding against attacks.
 
 #COL_00FFFF
-◆ガード性能＋２
+◆ Guard +2
 #COL_FFFFFF
-モンスターの攻撃をガードした時の
-ダメージを軽減する。
+Reduces damage taken when
+guarding against attacks.
 
 #COL_00FFFF
-◆精霊の加護
+◆ Divine Protection
 #COL_FFFFFF
-４分の１の確率で、受けたダメージが
-３０％軽減する。
+There is a 25% chance that damage
+received will be reduced by 30%.
 
 *JUMP_RETURN
 Return
@@ -1114,44 +1114,44 @@ Ammo
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-◆貫通弾ＬＶ１＆ＬＶ２追加
+◆ Pierce S Add 2
 #COL_FFFFFF
-貫通弾ＬＶ１、２が使用可能になる。
+Unlocks Pierce S LV1 & 2 Shots.
 
 #COL_00FFFF
-◆貫通弾全レベル追加
+◆ Pierce S Add 3
 #COL_FFFFFF
-貫通弾全レベルが使用可能になる。
+Unlocks all Pierce Shot levels.
 
 #COL_00FFFF
-◆散弾ＬＶ１＆ＬＶ２追加
+◆ Pellet S Add 2
 #COL_FFFFFF
-散弾ＬＶ１、２が使用可能になる。
+Unlocks Pellet S LV1 & 2 Shots.
 
 #COL_00FFFF
-◆散弾全レベル追加
+◆ Pellet S Add 3
 #COL_FFFFFF
-散弾全レベルが使用可能になる。
+Unlocks all Pellet Shot levels.
 
 #COL_00FFFF
-◆徹甲榴弾ＬＶ１＆ＬＶ２追加
+◆ Crag S Add 2
 #COL_FFFFFF
-徹甲榴弾ＬＶ１、２が使用可能になる。
+Unlocks Crag S LV1 & 2 Shots.
 
 #COL_00FFFF
-◆徹甲榴弾全レベル追加
+◆ Crag S Add 3
 #COL_FFFFFF
-徹甲榴弾全レベルが使用可能になる。
+Unlocks all Crag Shot levels.
 
 #COL_00FFFF
-◆拡散弾ＬＶ１＆ＬＶ２追加
+◆ Clust S Add 2
 #COL_FFFFFF
-拡散弾ＬＶ１、２が使用可能になる。
+Unlocks Clust S LV1 & 2 Shots.
 
 #COL_00FFFF
-◆拡散弾全レベル追加
+◆ Clust S Add 3
 #COL_FFFFFF
-拡散弾全レベルが使用可能になる。
+Unlocks all Clust Shot levels.
 
 *JUMP_RETURN
 Return
@@ -1166,27 +1166,27 @@ Reload
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-◆装填速度－１
+◆ Reload Speed -1
 #COL_FFFFFF
-ボウガンの
-リロードスピード修正値が－１される。
+Bowgun reload speed correction
+is reduced by 1.
 
 #COL_00FFFF
-◆装填速度－２
+◆ Reload Speed -2
 #COL_FFFFFF
-ボウガンの
-リロードスピード修正値が－２される。
+Bowgun reload speed correction
+is reduced by 2.
 
 #COL_00FFFF
-◆装填速度－３
+◆ Reload Speed -3
 #COL_FFFFFF
-ボウガンの
-リロードスピード修正値が－３される。
+Bowgun reload speed correction
+is reduced by 3.
 
 #COL_FF7F50
-※修正値が低いほど、
-　ボウガンのリロードスピードが
-　速くなる可能性があります。
+※A lower correction value
+ may increase the Bowgun's
+ reload speed.
 #COL_FFFFFF
 
 *JUMP_RETURN
@@ -1202,48 +1202,48 @@ Status
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-◆毒半減
+◆ Poison Halved
 #COL_FFFFFF
-毒状態から復帰するのにかかる
-時間が半減される。
+Time required to recover from
+Poison status is halved.
 
 #COL_00FFFF
-◆毒無効
+◆ Poison Negated
 #COL_FFFFFF
-毒状態にならなくなる。
+Prevents Poison status entirely.
 
 #COL_00FFFF
-◆麻痺半減
+◆ Paralysis Halved
 #COL_FFFFFF
-麻痺状態から復帰するのにかかる
-時間が半減される。
+Time required to recover from
+Paralysis status is halved.
 
 #COL_00FFFF
-◆麻痺無効
+◆ Paralysis Negated
 #COL_FFFFFF
-麻痺状態にならなくなる。
+Prevents Paralysis status entirely.
 
 #COL_00FFFF
-◆睡眠無効
+◆ Sleep Negated
 #COL_FFFFFF
-睡眠状態にならなくなる。
+Prevents Sleep status entirely.
 
 #COL_00FFFF
-◆気絶倍加
+◆ Stun Doubled
 #COL_FFFFFF
-気絶状態から復帰するために
-必要なボタン入力回数が倍になる。
+Doubles the required button
+inputs to recover from Stun.
 
 #COL_00FFFF
-◆気絶確率半減
+◆ Stun Halved
 #COL_FFFFFF
-攻撃を受けた時に増加される
-気絶値が半分になる。
+Halves the Stun buildup
+received from attacks.
 
 #COL_00FFFF
-◆気絶無効
+◆ Stun Negated
 #COL_FFFFFF
-気絶状態にならなくなる。
+Prevents Stun status entirely.
 
 *JUMP_RETURN
 Return
@@ -1258,27 +1258,27 @@ Heat/Cold
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-◆暑さ半減
+◆ Heat Effect Halved
 #COL_FFFFFF
-暑い場所で体力が減少するまでの
-時間が通常の半分になる。
+Halves the time it takes for
+health to deplete in hot areas.
 
 #COL_00FFFF
-◆暑さ無効
+◆ Heat Negated
 #COL_FFFFFF
-暑い場所でも体力が減少しなくなる。
+Negates heat damage entirely.
 
 #COL_00FFFF
-◆寒さ半減
+◆ Cold Effect Halved
 #COL_FFFFFF
-寒い場所でのスタミナ減少速度アップの
-影響が半減される。
+Halves the time it takes for
+stamina to deplete in cold areas.
 
 #COL_00FFFF
-◆寒さ無効
+◆ Cold Negated
 #COL_FFFFFF
-寒い場所でのスタミナ減少速度アップの
-影響を受けなくなる。
+Negates cold area stamina
+drain entirely.
 
 *JUMP_RETURN
 Return
@@ -1293,16 +1293,16 @@ Gathering
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-◆採取＋１
+◆ Gathering +1
 #COL_FFFFFF
-採取ポイントからアイテムを
-拾える回数が１回増える。
+Grants one additional gather
+attempt at gathering points.
 
 #COL_00FFFF
-◆採取＋２
+◆ Gathering +2
 #COL_FFFFFF
-採取ポイントからアイテムを
-拾える回数が２回増える。
+Grants two additional gather
+attempts at gathering points.
 
 *JUMP_RETURN
 Return
@@ -1311,22 +1311,22 @@ Return
 #COL_FFFFFF
 #LEFT
 #SIDE_008
-Divine Whim
+Whimsical
 #LINE
 #/TITLE
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-◆精霊の気まぐれ
+◆ Spirit's Whim
 #COL_FFFFFF
-ピッケル系と虫あみ系アイテムが
-少し壊れにくくなる。
+Pickaxes and bug nets become
+slightly more durable.
 
 #COL_00FFFF
-◆神の気まぐれ
+◆ Divine Whim
 #COL_FFFFFF
-ピッケル系と虫あみ系アイテムが
-壊れにくくなる。
+Pickaxes and bug nets become
+way more durable.
 
 *JUMP_RETURN
 Return
@@ -1341,16 +1341,16 @@ Good Luck
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-◆幸運
+◆ Good Luck
 #COL_FFFFFF
-クエストクリア時の報酬素材
-受け取り確率が少しアップする。
+Slightly boosts the chance of
+additional rewards after quests.
 
 #COL_00FFFF
-◆激運
+◆ Very Good Luck
 #COL_FFFFFF
-クエストクリア時の報酬素材
-受け取り確率がアップする。
+Boosts the chance of additional
+rewards after quests.
 
 *JUMP_RETURN
 Return
@@ -1365,14 +1365,14 @@ Combination
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-◆調合成功率＋５％
+◆ Combine Success +5%
 #COL_FFFFFF
-調合の成功率が５％上昇する。
+Combination success rate +5%.
 
 #COL_00FFFF
-◆調合成功率＋１０％
+◆ Combine Success +10%
 #COL_FFFFFF
-調合の成功率が１０％上昇する。
+Combination success rate +10%.
 
 *JUMP_RETURN
 Return
@@ -1387,43 +1387,43 @@ Special
 #SPASE_010
 #SIDE_020
 #COL_00FFFF
-◆挑発
+◆ Provocation
 #COL_FFFFFF
-モンスターに遭遇する確率が上昇する。
+Boosts monster encounter rate.
 
 #COL_00FFFF
-◆釣り名人
+◆ Fishing Master
 #COL_FFFFFF
-魚がかかった時に、
-釣り上げるタイミング合わせの
-受付時間が倍になる。
+When a fish bites, the timing
+window for reeling is twice
+as long.
 
 #COL_00FFFF
-◆運搬の達人
+◆ Backpacking Expert
 #COL_FFFFFF
-卵等の運搬時の移動速度がアップする。
+Boosts speed when carrying objects.
 
 #COL_00FFFF
-◆自動マーキング
+◆ Autotracker
 #COL_FFFFFF
-飛竜やドス系モンスターの位置が
-常にマップに表示される。
+Locations of strong monsters will
+always appear on map.
 
 #COL_00FFFF
-◆耳栓
+◆ Earplugs
 #COL_FFFFFF
-飛竜の咆哮を無効化する。
+Nullifies wyvern roars.
 
 #COL_00FFFF
-◆風圧無効
+◆ Wind Pressure
 #COL_FFFFFF
-風圧の影響を受けなくなる。
+Negates wind pressure effects.
 
 #COL_00FFFF
-◆地図常備
+◆ Farsight
 #COL_FFFFFF
-地図を持たなくても
-マップが表示される。
+The map will be displayed even
+if you don't have a map item.
 
 *JUMP_RETURN
 Return
