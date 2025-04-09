@@ -915,7 +915,7 @@ drinking a "Cold Drink".
 *IMG_08
 #LEFT
 #COL_00FFFF
-Eyecon
+Eye Icon
 #COL_FFFFFF
 Indicates that a monster
 is present in the area.
@@ -924,7 +924,7 @@ is present in the area.
 *IMG_09
 #LEFT
 #COL_00FFFF
-Eyecon (Strong)
+Eye Icon (Strong)
 #COL_FFFFFF
 Indicates that a strong monster
 is present in the area.
