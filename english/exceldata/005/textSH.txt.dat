@@ -1,7 +1,7 @@
 What brings you here today?
 What quest would
 you like?
-This quest good?
+Is this quest okay?
 Hrm, it seems you don't
 have enough money.
 Huh, you're cancelling it?
@@ -142,12 +142,12 @@ share what I've learned...
 ≪Hero of Kokoto≫
 I've learned in this here
 village.
-For a hunter such as you,
-here's ≪Leather Armor≫.
+To get you started, here's
+here's the ≪Leather Set≫.
 It's not much, however,
 it'll do.
-By the way, ≪Leather Armor≫
-cannot be sold.
+By the way, you cannot sell
+the ≪Leather Set≫.
 Remember that, now.
 Come back when you've made
 your preparations.
@@ -184,9 +184,9 @@ Look at your top right.
 There you can find icons
 that show your status and
 other various conditions.
-The ≪Eyecon≫ you see right
-now means that there's a
-monster in this area.
+The ≪Eye Icon≫ you see
+now means that there's
+a monster in this area.
 There are many other icons,
 but I'm sure you'll learn
 them as you go.
@@ -485,7 +485,7 @@ to prove yourself by
 challenging it.
 I've already heard talk
 from the villagers!
-That you've defeated the
+You've defeated the
 single-horned beast!
 Incredible, without a doubt
 the new ≪Hero of Kokoto≫
@@ -697,7 +697,7 @@ before?
 When eating stuff like
 BBQ steak, you'll feel more
 full... or something.
-Is it truee?
+Is it true?
 An often-used gunner skill
 is ≪Normal S Attack Up≫.
 I've heard that this
@@ -714,9 +714,9 @@ Well, you get it, right?
 There are a few exceptions,
 but there's no harm in
 using this trick.
-≪Velociprey Armor≫,
-≪Genprey Armor≫, and
-≪Ioprey Armor. 
+The ≪Velociprey Set≫,
+≪Genprey Set≫, and
+≪Ioprey Set≫. 
 Once upgraded, these three
 have skills that resist
 abnormal statuses like
@@ -757,9 +757,9 @@ It's really amazing how you
 bested both a ≪Rathalos≫
 AND a ≪Rathian≫!
 I meant only to say that,
-but so you know, both
-≪Rathalos Armor≫ and
-≪Rathian Armor≫ can be
+but so you know, both the
+≪Rathalos Set≫ and
+≪Rathian Set≫ can be
 upgraded to ≪Level 7≫.
 There are a couple skills
 that increase the reward
@@ -772,7 +772,7 @@ useful.
 Congratulations on slaying
 the one-horned wyvern!
 I've added 
-≪Monoblos Armor≫ to the
+≪Monoblos Set≫ to the
 list of craftable armor, so
 please let me know when you
 get the materials & money!
@@ -969,7 +969,7 @@ According to info I've
 gathered, there should be
 some in the
 ≪Forest & Hills Nests≫ and
-the  ≪Dark Desert≫.
+the ≪Dark Desert≫.
 What kind of item is it?
 What's it used for?
 Looking forward to it, heh.
@@ -1148,8 +1148,8 @@ your run-of-the-mill weapon
 just isn't gonna work on.
 Well, I doubt that's of any
 concern for you now.
-What is it now?
-And the ≪Black Gravios≫?!
+What is it now? As for the
+≪Black Gravios≫?!
 As far as strength goes,
 those're in another league!
 Not by a ton, but... even I
@@ -1157,8 +1157,8 @@ don't feel I can top that.
 Oh, I don't think I've seen
 your face around here. 
 So you're the new rookie?
-I'm not trying to be mean,
-but you should quit.
+Don't take this the wrong
+way, but you should quit.
 It's not worth it for such
 a dangerous job.
 Well, if you really want to
@@ -1201,7 +1201,7 @@ Do you know of the
 You definitely ought to
 have one when trying
 difficult combinations.
-There are volumes ①～⑤,
+There are volumes ①～⑤;
 I hear carrying them in
 order, starting with ①,
 improves success rate.
@@ -1227,33 +1227,33 @@ it's got a poison gas
 attack.
 You should probably bring
 ≪Antidote≫.
-獰猛で大型の飛竜、
-≪リオレウス≫が≪火山≫で
-目撃されたそうよ。
-≪火山≫で
-火竜との戦いだなんて
-考えただけでもゾッとするわ。
-とにかく、
-無茶だけはしないことね。
-あたし、この間、釣りしてたら
-≪変な色≫の大怪鳥が
-現れてもうビックリ！
-ハンターさんにとっては
-おなじみの鳥かしら？
-でも、あんな色って…。
-目の錯覚かしら？
+A fierce flying wyvern,
+≪Rathalos≫, was spotted in
+the ≪Volcano≫.
+Just thinking of fighting
+one makes me shudder, let
+alone in the ≪Volcano≫!
+Of course, I wouldn't do
+something so ridiculous.
+I, just now, when fishing,
+spotted a ≪Yian Kut-Ku≫...
+but it was BLUE!
+Is that something you've
+heard of, hunter?
+Or, maybe... maybe it was
+just an illusion?
 It's known that 
 ≪Azure Rathalos≫ exist,
 but I heard rumors that a
 ≪Pink Rathian≫ is a thing.
 Could it be true!?
 What do you think?
-何か隣りの人、
-すっかり、変な色した飛竜に
-会うのに夢中みたいね。
-そんなに会いたいものかしら？
-ハンターの人って
-よくわからないわ。
+The hunter next to me seems
+enthralled by such a
+prospect.
+Is it really that exciting?
+I don't really get hunters
+all that much...
 Hunter,
 have you gotten any
 ≪Novacrystal≫ yet?
@@ -1262,460 +1262,460 @@ come from ≪Quartz Ore≫.
 If you have any of those,
 you can make some strong
 gear.
-クリスタルハンティング、
-なんて夢のあるひびき
-なのかしら！ウットリ。
+Crystal hunting, now that
+just sounds wonderful! How
+dreamy...
 I heard the news!
 You're really something,
 taking down that Monoblos.
 Though, actually...
 Do Monoblos also have
 different colors, I wonder?
-村長の話だと、
-≪火山≫に生息する
-鎧竜は睡眠ガス攻撃を
-仕掛けてくるそうよ。
-厄介な攻撃だけど
-≪ガード≫で防げるの
-かしら！？
-村長が言ってたわ。
-あなたには
-ハンターとしての資質が全て
-備わっているって。
-まあ、あたしの目に狂いは
-なかったってことかしら！？
-ニャ、ニャ、ニャ？
-新米のハンターさんかニャ？
-ハンターの仕事に油断は
-禁物ニャ。
-どんな活躍をしても、
-ゲームデータを≪セーブ≫
-しなかったら意味ないニャ。
-≪セーブ≫はまめに行うニャ。
-≪セーブ≫場所？
-≪セーブ≫は左ソフトキーの
-≪メニュー≫からできるニャ。
-様々なアイテムには、
-≪レア度≫というものが
-ついているニャ。
-よりレアな素材を使って
-武具の強化・生産を行えば、
-よりレアで強力な装備が
-完成するニャ！
-≪レア度≫の高いアイテムを
-手に入れるためには、
-すごく危険も伴うニャ。
-気をつけるニャ。
-生産リストにない武具でも
-必要な素材を全てそろえると、
-自然に生産リストに
-足されるニャ。
-中にはハンターランクを
-上げると足される武具も
-あるニャ。
-新しい武具が足されたら
-とにかく必要素材の確認ニャ。
-アイテム屋に売っている
-≪素材玉≫は調合にすごく
-役立つニャ！
-≪閃光玉≫やモンスターを
-状態異常にする≪毒玉≫など
-いろんなものが作れるニャ！
-≪千里眼の薬≫を飲めば
-少しの間だけ、
-フィールドにいる
-飛竜・ドス系モンスターの
-位置を知ることができるニャ。
-≪モドリ玉≫を使えば、
-フィールドのどんな場所
-からも一瞬で
-ベースキャンプに戻る
-ことができるニャ。
-目的のアイテムをすぐに
-納品したい時や支給品の
-補充など、
-その時の
-状況に応じて使える、
-便利アイテムニャ！
-アイテム屋に置かれている
-≪栄養剤≫は
-≪アオキノコ≫と≪不死虫≫で
-作れるニャ。
-買わなくても手に入るニャ。
-お金の節約ニャ！
-≪火薬草≫と≪ニトロダケ≫を
-調合すると≪爆薬≫が
-作れるニャ。
-≪爆薬≫は武器の素材に
-利用されるニャ。
-≪けむり玉≫は周囲の
-モンスターに見つかりにくく
-するアイテムニャ。
-探索をしたい時に役立つニャ。
-≪素材玉≫と≪ツタの葉≫を
-調合すると作れるニャ。
-≪にが虫≫と
-≪ハチミツ≫の調合で、
-≪増強剤≫ができるのは
-知っているかニャ？
-その≪増強剤≫に、
-≪生焼け肉≫を調合すると、
-なんと…
-≪強走薬≫の完成ニャ。
-すごいニャ！
-この間、≪ジャングル≫で
-≪マンドラゴラ≫って
-呼ばれるキノコを発見
-したニャ。
-調合に使えそうな
-気がするニャ。
-すごい情報を
-手に入れたニャ！
-≪マンドラゴラ≫って
-激レアなキノコと、
-≪栄養剤グレート≫を
-調合すると、なんと…
-≪秘薬≫の完成ニャ！
-すごすぎるニャ！
-ニャ、ニャ、ニャー！
-≪力の護符≫はもう手に
-入れたかニャ？
-持っているだけで、
-攻撃力が上がる、
-ありがたいお守りニャ。
-ちょっと値段は高いけど
-持っていても損はしない
-はずニャ！
-≪滅龍弾≫って
-知っているかニャ？
-龍属性が弱点のモンスターに
-効く、特別な弾ニャ。
-≪龍殺しの実≫と
-≪カラ骨【大】≫を調合すると
-完成ニャ！
-またまた、すごい情報を
-手に入れたニャ！
-≪活力剤≫と、
-≪ケルビの角≫を
-調合すると、なんと…
-≪いにしえの秘薬≫の
-完成ニャ！
-これを使えば
-体力とスタミナが最大まで
-上昇するニャ！
-すごすぎるニャ！！
-ニャ、ニャ、ニャ、
-ニャ、ニャ、ニャー！！！
+According to the Chief, the
+≪Gravios≫ that live in the
+≪Volcano≫ have a sleeping
+gas attack.
+It definitely sounds like a
+dangerous attack, but can
+you ≪Guard≫ it!?
+The Chief was saying...
+That you have all the
+qualities needed to be a
+hunter.
+Well now, didn't I say my
+eyes don't deceive me!?
+Meow meow meow?
+Are you the rookie hunter?
+As a hunter you pawsitively
+must pay attention!
+No matter what you do, make
+sure you ≪Save≫ your game
+or it'll be for nothing!
+≪Save≫ frequently, meow.
+Where do you ≪Save≫?
+You can ≪Save≫ using the
+left soft key ≪Menu≫.
+All items have something
+attached to them called a
+≪Rarity≫, meow.
+The rarer the materials you
+use for your equipment, the
+rarer and stronger the
+equipment will be!
+Of course, getting items
+with high ≪Rarity≫ doesn't
+come without risks, meow!
+Be careful.
+Weapons that you can't make
+currently can be unlocked
+by obtaining the required
+materials, meow.
+Some are also unlocked by
+raising your hunter
+rank.
+When you unlock something
+mew be sure to have a look!
+The ≪Bomb Material≫ the
+item shop sells really
+comes in handy, meow!
+≪Flash Bomb≫, the status
+inflicting ≪Poison Bomb≫,
+and many more can be made!
+If you drink ≪Psychoserum≫
+you can, just for a little
+bit, know the location of
+large monsters on the
+map, meow.
+Use a ≪Farcaster≫, and no
+matter where you are you
+are,
+you'll return to base camp
+in an instant!
+When you wanna quickly turn
+in a quest item or stock up
+on supply items,
+you can use them as needed.
+They're really such mewsful
+items!
+You can make the
+≪Nutrients≫ item found in
+the store with a ≪Godbug≫
+and a ≪Blue Mushroom≫. 
+You can get them without
+buying any, spend wisely!
+Combine a ≪Fire Herb≫ with
+a ≪Nitroshroom≫ and you'll
+get ≪Gunpowder≫, meow.
+≪Gunpowder≫ is used as a
+material for some weapons.
+You can use a ≪Smoke Bomb≫
+to obscure yourself from a
+meownster's view.
+Very helpful for exploring!
+You can craft them with
+≪Bomb Material≫ and ≪Ivy≫.
+Did you know that combining
+≪Bitterbug≫ and ≪Honey≫
+gives you a
+≪Catalyst≫?
+With the ≪Catalyst≫, you
+can mix ≪Rare Steak≫ to...
+well...
+make ≪Power Juice≫.
+Purrfect!
+Earlier I found a mushroom
+called a ≪Mandragora≫
+when in the ≪Jungle≫,
+meow.
+My whiskers sense it can be
+used in combinations!
+I've got some great
+information, meow!
+Combine a ≪Mandragora≫, a
+very rare mushroom, with
+≪Mega Nutrients≫, and
+well... you get a 
+≪Max Potion≫, meow!
+Nyamazing!
+Meow, meow, meow!
+Do you have a
+≪Powercharm≫?
+Just by having it in your
+item pouch, it'll raise
+your attack!
+They're purr-etty
+expensive, but you won't
+regret buying it!
+Do you know of 
+≪Drgn S≫ ammo?
+It packs a punch against
+meownsters weak dragon!
+You can make it by
+combining ≪Dragon Seed≫
+with ≪Lg Bone Husk≫.
+I just learned something
+pawsitively awesome!
+Mix a ≪Immunizer≫
+with a ≪Kelbi Horn≫
+and, well...
+you'll get an
+≪Ancient Potion≫, meow!
+Use it, and it'll raise
+both your health and your
+stamina to the max!
+Nyamazing!!
+Meow, meow, meow,
+meow, meow, meow!!!
 あ
 あ
 あ
 あ
 あ
 あ
-そのクエストを受けるには
-ハンターランクが足りない
-ようじゃの。
-ハンターランクを上げるには
-ハンターランクポイントが
-必要じゃ。
+Your hunter rank isn't
+sufficient enough to take
+on this quest.
+You need more hunter rank
+points to raise your hunter
+rank.
 あ
 あ
 あ
 あ
 あ
 あ
-≪サボテンの花≫を
-いい所にきたね。
-ある街で祭りがあるんだが、
-その為の料理が足りないんだ。
-≪こんがり焼けた肉≫を、
-調達してきてくれないかい？
-ありがとね。
-また、お願いするよ。
-そうだ、
-これはほんのお礼だよ。
-武器の生産に役立つかもね。
-あら、
-ダメかい。
-大丈夫かい？
-無理いって悪かったねえ。
-また、お願いするよ。
-…じゃ、あらためて。
-最近、ガンナーを目指し、
-奮闘している所なんだが
-弾の調合に魚が必要なんだよ。
-釣りが苦手な俺の代わりに魚を
-取ってきてくれないか？
-お、ありがとな。
-これはほんのお礼だよ。
-しょうがない。
-自分で取りに行くか。
-残念、
-自分で取りに行くか。
-こう見えてもあたし、
-結構グルメなのよ。
-特に≪飛竜の卵≫を
-使った料理には目がないのよ。
-だから、お願い、
-≪飛竜の卵≫を
-取ってきて貰えないかしら？
-ありがとう。
-これはほんのお礼よ。
-何かしらの防具の強化・生産
-に役立つみたい。
-そうよねえ…。
-卵の運搬は危険が
-いっぱいだもんね。
-あなた、大丈夫？
-ちょっと無理なお願い
-だったようね。
-ハンターのあんたに頼みが
-あるんだ。
-とある街で≪燃石炭≫を必要と
-しているようなんだが、
-ちょっくら
-≪ジャングル≫へ行って
-取ってきてくれないか？
-助かったぜ。
-また、頼むよ。
-これはほんのお礼だよ。
-序盤では貴重な鉱石だ。
-そうかい。
-それは残念だ。
-まあ、
-こういう日もあるさ。
-また、頼むよ。
-…じゃ、あらためて。
-大変ニャ！
-≪マタタビ≫がないニャ！！
-あれがないと困るニャ…。
-お願いニャ！
-獣人族の大好物≪マタタビ≫を
-取ってきてほしいニャ。
-助かったニャ。
-これはお礼ニャ。
-それは
-困ったニャ…。
-大丈夫だったかニャ？
-無茶を言って悪かったニャ。
-あなた知ってる？
-≪砂漠≫に生えた
-小さなサボテンからは
-≪サボテンの花≫が取れるの。
-どんな花なのか興味が
-あるわ。
-だから、お願い
-取ってきて貰えないかしら？
-ありがとう。
-これはほんのお礼よ。
-そう、それは残念…。
-あなた、大丈夫？
-ちょっと無理なお願い
-だったようね。
-いい所にきたね。
-最近、日照り続きでね。
-この村も今はちょっとした
-食料不足なんだよ。
-村の危機を救う為にも
-≪こんがり焼けた肉≫を、
-調達してきてくれないかい？
-ありがとね。
-また、お願いするよ。
-そうだ、
-これはほんのお礼だよ。
-あら、
-ダメかい。
-大丈夫かい？
-無理いって悪かったねえ。
-また、お願いするよ。
-…じゃ、あらためて。
-君、≪龍殺しの実≫って
-知っているかい？
-≪滅龍弾≫っていう
-特別な弾を作るのに
-必要なんだ。
-確か≪火山≫の一番奥に
-あったはずだ。
-日々忙しい俺の代わりに
-取ってきてくれないか？
-お、ありがとな。
-これはほんのお礼だよ。
-しょうがない。
-自分で取りに行くか。
-残念、
-自分で取りに行くか。
-最近、鉱山でやたらと
-≪ランゴスタ≫が発生している
-ようなんだ。
-村の連中も困っている様だし
-ちょっと討伐してきて
-くれないか？
-無事、戻ってきたようだな。
-これはささやかな礼だ。
-貴様、
-私の頼みが聞けないだと！
-だらしない。
-それでもハンターの端くれか？
-まあ、いい。
-…じゃ、あらためて。
-ハンターのあんたに頼みが
-あるんだ。
-ある砦の兵士長からの
-依頼なんだが、
-何でも飛竜用の特別な
-大砲の砲弾を作るのに
-≪火薬岩≫が必要らしい。
-ちょっくら≪火薬岩≫を
-取ってきてくれないか？
-助かったぜ。
-また、頼むよ。
-これはほんのお礼だ。
-そうかい。
-それは残念だ。
-まあ、
-こういう日もあるさ。
-また、頼むよ。
-…じゃ、あらためて。
-いい所にきたね。
-あんた、
-肉を焼くのは得意かい？
-街の方で救助活動の為に
-≪こんがり肉≫が必要なんだ。
-調達してきてくれないかい？
-ありがとね。
-また、お願いするよ。
-そうだ、
-これはほんのお礼だよ。
-実に貴重な回復薬だよ。
-あら、
-ダメかい。
-大丈夫かい？
-無理いって悪かったねえ。
-また、お願いするよ。
-…じゃ、あらためて。
-俺は釣りが苦手でね。
-≪黄金魚≫って魚を
-一度も見た事がないんだ。
-礼ならするから
-取ってきてくれないか？
-お、ありがとな。
-これはほんのお礼だよ。
-しょうがない。
-自分で取りに行くか。
-残念、
-自分で取りに行くか。
-何だか最近、
-≪ジャングル≫でやたらと
-≪ブルファンゴ≫が
-増えた気がする。
-村の連中も困っている様だし
-ちょっと、討伐してきて
-くれないか？
-無事、戻ってきたようだな。
-これはささやかな礼だ。
-貴様、
-私の頼みが聞けないだと！
-だらしない。
-それでもハンターの端くれか？
-まあ、いい。
-…じゃ、あらためて。
-ハンターのあんたに頼みが
-あるんだ。
-何でも、
-対飛竜用の武器の為に
-ある街で≪燃石炭≫を大量に
-必要としているらしい。
-ちょっくら
-≪ジャングル≫へ行って
-取ってきてくれないか？
-助かったぜ。
-また、頼むよ。
-これはほんのお礼だよ。
-かなり貴重な鉱石だ。
-そうかい。
-それは残念だ。
-まあ、
-こういう日もあるさ。
-また、頼むよ。
-…じゃ、あらためて。
-最近、≪沼地≫で
-≪カンタロス≫が異常発生して
-村の連中も
-困っている様なんだ。
-≪沼地≫まで行って、
-≪カンタロス≫を駆除してきて
-くれないか？
-無事、戻ってきたようだな。
-これはささやかな礼だ。
-貴様、
-私の頼みが聞けないだと！
-だらしない。
-それでもハンターの端くれか？
-まあ、いい。
-…じゃ、あらためて。
-≪白水晶≫という宝石の鉱脈が
-見つかったとの噂を聞いたが
-いまいち信用できない。
-そこで
-ハンターのあんたに頼みが
-あるんだ。
-≪白水晶の原石≫を
-取ってきてくれないか？
-おお！
-これが≪白水晶の原石≫。
-どうやら噂は本当だった
-ようだな。
-ありがとな。
-これはほんのお礼だ。
-そうかい。
-それは残念だ。
-まあ、
-こういう日もあるさ。
-また、頼むよ。
-…じゃ、あらためて。
-あたしがグルメなのは
-あなたももう知っている
-わよね？
-≪草食竜の卵≫を使った
-料理。
-それはもう絶品らしいわ。
-だから、お願い
-≪草食竜の卵≫を
-取ってきて貰えないかしら？
-ありがとう。
-これはほんのお礼よ。
-そう、それは残念…。
-あなた、大丈夫？
-ちょっと無理なお願い
-だったようね。
-最近、妙に≪岩地≫の
-≪イーオス≫どもが騒がしい。
-ヤツらのリーダーである、
-≪ドスイーオス≫を狩っておく
-必要があるな。
-ちょっと討伐してきて
-くれないか？
-無事、戻ってきたようだな。
-これはささやかな礼だ。
-貴様、
-私の頼みが聞けないだと！
-だらしない。
-それでもハンターの端くれか？
-まあ、いい。
-…じゃ、あらためて。
-ハンターのあんたに頼みが
-あるんだ。
-≪岩地≫に生息する岩竜。
-あいつのせいで鉱夫たちが
-えらい迷惑をしている。
-頼む。
-討伐してきてくれないか？
-本当に助かったぜ。
-ありがとよ。
-これはほんのお礼だ。
-そうかい。
-それは残念だ。
-まあ、
-こういう日もあるさ。
-また、頼むよ。
-…じゃ、あらためて。
+You've come at the right
+time for ≪Cactus Flower≫.
+Another town has a festival
+but not enough ingredients!
+Do you think you could get
+us some ≪Well-Done Steak≫?
+Thank you!
+I knew you'd help us out.
+Mhm,
+you've been a big help!
+This may help you out.
+Oh,
+alright then.
+Are you okay?
+Sorry to make you do that.
+I knew you'd help us out!
+...Come again!
+Yo. Lately I've been
+learning the bowgun, and I
+need fish to make ammo.
+But I uh, suck at fishing.
+Can you do it instead?
+Ah, thanks.
+Much appreciated.
+Oh well. Maybe
+I'll just do it myself.
+Disappointing, maybe
+I'll just do it myself.
+I may not look the part,
+but I'm a big gourmet.
+I'm really a big sucker for
+≪Wyvern Egg≫ in cooking.
+So, please...
+could you get me a
+≪Wyvern Egg≫?
+Thank you!
+I really appreciate it!
+Some way or another, it may
+help to upgrade your armor.
+You know...
+'Cause there's plenty of
+dangers, transporting eggs.
+Are you alright?
+Oh, I guess it was a lot
+to ask of you anyway.
+Hunter, I've got a job for
+ya.
+Seems a certain town needs
+≪Coal≫, so,
+how does a trip to the
+≪Jungle≫ to pick some up
+for me sound?
+Thanks, hunter!
+Reliable as always!
+Ya really came through.
+It's a valuable ore.
+Hm.
+That's too bad.
+Well,
+we've all got those days.
+Reliable as always!
+Another time, yeah?
+Oh no!
+I'm meowt of ≪Felvine≫!!
+Without it I'm stumped...
+Purrlease!
+I want you to bring me back
+my favorite ≪Felvine≫.
+Many thanks!
+I a-purr-eciate it!
+I really was in a
+slump, meow.
+Are you okay?
+Was it unreasonable, meow?
+Did you know?
+Check the small cactuses in
+the ≪Desert≫, you can get
+≪Cactus Flower≫ from them.
+Oh, they really sound so
+pretty... I wanna see one!
+So, please...
+could you get me some?
+Thank you!
+I really appreciate it!
+Aw... well, I understand.
+Are you alright?
+Oh, I guess it was a lot
+to ask of you anyway.
+You've come at a good time!
+Recently there's been a bit
+of a dry spell, and we're a
+bit short on ingredients.
+Do you think you could get
+us some ≪Well-Done Steak≫
+for the time being?
+Thank you!
+I knew you'd help us out.
+Mhm,
+you've been a big help!
+Oh,
+alright then.
+Are you okay?
+Sorry to make you do that.
+I knew you'd help us out!
+...Come again!
+Yo, you know what a
+≪Dragon Seed≫ is?
+You need it to make a
+special kind of bowgun
+ammo, ≪Drgn S≫.
+I'm pretty sure it's common
+in the ≪Volcano≫ depths.
+I've been busy these days
+so can you get it instead?
+Ah, thanks.
+Much appreciated.
+Oh well. Maybe
+I'll just do it myself.
+Disappointing, maybe
+I'll just do it myself.
+Recently I've been seeing
+a lot more ≪Vespoid≫ than
+usual while out mining.
+Some of the villagers are
+getting concerned, so can
+you slay them for me?
+You've returned safely.
+Thanks for the help.
+Why you! Can't even listen
+to what I ask, huh?
+How sloppy.
+They call THIS a hunter?
+Yeah, whatever.
+Be seeing you soon.
+Hunter, I've got a job for
+ya.
+The request comes from the
+commander of a fort, but
+it seems they need some
+≪Powderstone≫ for their
+monster defense cannons.
+So, think ya can get me
+some ≪Powderstone≫?
+Thanks, hunter!
+Reliable as always!
+Ya really came through.
+Hm.
+That's too bad.
+Well,
+we've all got those days.
+Reliable as always!
+Another time, yeah?
+You've come at a good time!
+You're quite skilled at
+grilling meat, aren't you?
+A rescue operation needs
+≪Well-Done Steak≫.
+Won't you deliver some?
+Thank you!
+I knew you'd help us out.
+Mhm,
+you've been a big help!
+This is a precious potion.
+Oh,
+alright then.
+Are you okay?
+Sorry to make you do that.
+I knew you'd help us out!
+...Come again!
+Yo. Know how I'm awful at
+fishing? Well, I've never
+seen a ≪Goldenfish≫.
+If you wouldn't mind, could
+you catch me one?
+Ah, thanks.
+Much appreciated.
+Oh well. Maybe
+I'll just do it myself.
+Disappointing, maybe
+I'll just do it myself.
+Seems that there's been
+more ≪Bullfango≫ than usual
+in the ≪Jungle≫ as of
+late.
+Some of the villagers are
+getting concerned, so can
+you slay them for me?
+You've returned safely.
+Thanks for the help.
+Why you! Can't even listen
+to what I ask, huh?
+How sloppy.
+They call THIS a hunter?
+Yeah, whatever.
+Be seeing you soon.
+Hunter, I've got a job for
+ya.
+Well,
+there's a nearby town that
+needs a lot of ≪Coal≫ for
+their monster defenses.
+How does another trip to
+the ≪Jungle≫ to get some
+up for me sound?
+Thanks, hunter!
+Reliable as always!
+Ya really came through.
+It's a quite valuable ore.
+Hm.
+That's too bad.
+Well,
+we've all got those days.
+Reliable as always!
+Another time, yeah?
+In the ≪Swamp≫ there's been
+a lot of ≪Hornetaur≫ lately
+and it seems to be
+troubling the villagers.
+Can you head to the 
+≪Swamp≫ and go exterminate
+some ≪Hornetaur≫ for me?
+You've returned safely.
+Thanks for the help.
+Why you! Can't even listen
+to what I ask, huh?
+How sloppy.
+They call THIS a hunter?
+Yeah, whatever.
+Be seeing you soon.
+I've heard rumors of a vein
+of ≪Quartz Ore≫, but I
+dunno if I believe it.
+That's where, hunter,
+I've got a job for
+ya!
+Think ya can get me some
+≪Quartz Ore≫?
+Oo!
+This is the real deal!
+Seems the rumors were
+true, eh?
+Thanks a bunch, hunter!
+Ya really came through.
+Hm.
+That's too bad.
+Well,
+we've all got those days.
+Reliable as always!
+Another time, yeah?
+As I'm sure you know
+already, I'm really a huge
+gourmet.
+So, cooking using a
+≪Herbivore Egg≫...
+That sounds so delightful!
+So, please...
+could you get me a
+≪Herbivore Egg≫?
+Thank you!
+I really appreciate it!
+Aw... well, I understand.
+Are you alright?
+Oh, I guess it was a lot
+to ask of you anyway.
+There's a pack of menacing
+≪Ioprey≫ in the ≪Crags≫.
+Seems you'll have to take
+out their leader, an
+≪Iodrome≫.
+Think you can slay it for
+me?
+You've returned safely.
+Thanks for the help.
+Why you! Can't even listen
+to what I ask, huh?
+How sloppy.
+They call THIS a hunter?
+Yeah, whatever.
+Be seeing you soon.
+Hunter, I've got a job for
+ya.
+There's a Basarios in the
+≪Crags≫ that's really been
+pestering the miners. So...
+I've got a request for ya.
+Can ya hunt it for me?
+Thanks, hunter!
+Reliable as always!
+Ya really came through.
+Hm.
+That's too bad.
+Well,
+we've all got those days.
+Reliable as always!
+Another time, yeah?
