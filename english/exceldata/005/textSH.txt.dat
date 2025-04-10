@@ -19,8 +19,8 @@ Uh-oh! Ya don't have
 enough money!
 enough materials!
 enough money & materials!
-Hm, seems that weapon can't
-be upgraded any further.
+to craft more than one
+of that weapon!
 a weapon when you sell what
 ya have equipped!
 You'll need %z and the
@@ -36,8 +36,8 @@ What, changed your mind?
 Thanks!
 Anything else?
 Come again soon, now!
-Hm, that weapon can't
-be upgraded any further.
+any upgrade left for that
+weapon!
 Welcome.
 What'll it be today?
 What will you upgrade?
@@ -143,7 +143,7 @@ share what I've learned...
 I've learned in this here
 village.
 To get you started, here's
-here's the Å·Leather SetÅ‚.
+the Å·Leather SetÅ‚.
 It's not much, however,
 it'll do.
 By the way, you cannot sell
@@ -191,7 +191,7 @@ There are many other icons,
 but I'm sure you'll learn
 them as you go.
 Now, have a safe journey!
-A hunter must learn to be
+A hunter must learn to
 self-sufficient.
 If you grill the raw meat
 you get from monsters,
@@ -207,7 +207,7 @@ color. Press Å·ConfirmÅ‚, and
 you've a well-done steak!
 Are you ready?
 Commence the grilling!!
-Ah, item gathering.
+gather items.
 Find the required items in
 the field, and put them in
 delivery box.
@@ -228,7 +228,7 @@ combine to make a Å·PotionÅ‚.
 Don't forget to put the
 Å·PotionÅ‚ you just made into
 the delivery box!
-Ah, fishing.
+fish.
 If you have a lure,
 you can fish at any fishing
 point.
@@ -248,7 +248,7 @@ When you run out of bait,
 in the grass you can find
 a Å·WormÅ‚ or Å·CricketÅ‚ for
 bait.
-Ah, mining.
+mine materials from ore.
 The ores you can get from
 mining are helpful for
 upgrading your gear!
@@ -1424,8 +1424,8 @@ rank.
 Ç†
 Ç†
 Ç†
-You've come at the right
-time for Å·Cactus FlowerÅ‚.
+Å·Cactus FlowerÅ‚
+You've come at a good time!
 Another town has a festival
 but not enough ingredients!
 Do you think you could get
@@ -1561,7 +1561,7 @@ Be seeing you soon.
 Hunter, I've got a job for
 ya.
 The request comes from the
-commander of a fort, but
+captain of a fort, but
 it seems they need some
 Å·PowderstoneÅ‚ for their
 monster defense cannons.
