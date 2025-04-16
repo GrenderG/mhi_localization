@@ -7,7 +7,7 @@ This repository contains:
 - **Original game files**
 - **Translated game files**
 
-For unpacking and repacking the game files, we are using [MHiRepacker](https://github.com/Sin365/MHiRepacker).
+For unpacking and repacking the game files, we are using [MHiRepacker](https://github.com/Sin365/MHiRepacker) or *mhitool.py* inside this repository.
 
 ## Community & Contributions
 If you're passionate about **Keitai gaming** and want to contribute, feel free to submit pull requests or open issues. Also, join the **Keitai community** to connect with others interested in these kinds of games:
