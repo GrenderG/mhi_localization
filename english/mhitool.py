@@ -291,7 +291,7 @@ def build(input_file, output_file):
         print(f"MHi common data file build done")
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="MHi common package/data file unpack/repack/parse/build tool (v1.5)")
+    parser = argparse.ArgumentParser(description="MHi common package/data file unpack/repack/parse/build tool (v1.6)")
     subparsers = parser.add_subparsers(dest='command', required=True)
 
     unpack_parser = subparsers.add_parser('unpack', 
@@ -322,12 +322,20 @@ if __name__ == '__main__':
 
     try:
         if args.command == 'unpack':
+            if args.input_file == args.output_folder:
+                parser.error("output cannot be the same as input")
             unpack(args.input_file, args.output_folder)
         elif args.command == 'repack':
+            if args.input_folder == args.output_file:
+                parser.error("output cannot be the same as input")
             repack(args.input_folder, args.output_file)
         elif args.command == 'parse':
+            if args.input_file == args.output_file:
+                parser.error("output cannot be the same as input")
             parse(args.input_file, args.output_file)
         elif args.command == 'build':
+            if args.input_file == args.output_file:
+                parser.error("output cannot be the same as input")
             build(args.input_file, args.output_file)
     except Exception as e:
         print(f"EXIT: {str(e)}\n{traceback.format_exc()}")
