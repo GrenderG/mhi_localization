@@ -21,12 +21,16 @@
 #LINE
 #COL_FFFF00
 
-CN like v0.3a
-"漢化" by 猪突猛進鍋(PoogieCharger)
-特別感謝：Grender、皓月阿姨
-　　　　　以及Keitai Wiki社区
+CN-like v1.0
+"漢化" by 猪突猛進鍋（PoogieCharger）
+
+特別感謝：
+Keitai Wiki社区（失傳媒体保存）
+Grender、皓月阿姨（技術支持）
+DeepSeek（功能脚本實現）
+
 #COL_FFFFFF
-本地化項目地址：
+本地化項目倉庫：
 github.com/GrenderG/mhi_localization
 <010>
 #TITLE
