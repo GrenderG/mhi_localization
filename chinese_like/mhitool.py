@@ -291,7 +291,7 @@ def build(input_file, output_file):
         print(f"MHi通用文件重构完毕")
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="MHi文件打包/解包/分析/重构工具 (v1.5)")
+    parser = argparse.ArgumentParser(description="MHi文件打包/解包/分析/重构工具 (v1.6)")
     subparsers = parser.add_subparsers(dest='command', required=True)
 
     unpack_parser = subparsers.add_parser('unpack', 
@@ -322,12 +322,20 @@ if __name__ == '__main__':
 
     try:
         if args.command == 'unpack':
+            if args.input_file == args.output_folder:
+                parser.error("输入与输出不能相同")
             unpack(args.input_file, args.output_folder)
         elif args.command == 'repack':
+            if args.input_folder == args.output_file:
+                parser.error("输入与输出不能相同")
             repack(args.input_folder, args.output_file)
         elif args.command == 'parse':
+            if args.input_file == args.output_file:
+                parser.error("输入与输出不能相同")
             parse(args.input_file, args.output_file)
         elif args.command == 'build':
+            if args.input_file == args.output_file:
+                parser.error("输入与输出不能相同")
             build(args.input_file, args.output_file)
     except Exception as e:
         print(f"程序终止: {str(e)}\n{traceback.format_exc()}")
