@@ -4,6 +4,8 @@ import struct
 import traceback
 
 def unpack(input_file, output_folder):
+    if os.path.abspath(input_file) == os.path.abspath(output_folder):
+        raise ValueError("output cannot be the same as input")
     try:
         if not os.path.isfile(input_file):
             raise ValueError("input file does not exist")
@@ -64,6 +66,8 @@ def unpack(input_file, output_folder):
         exit(1)
 
 def repack(input_folder, output_file):
+    if os.path.abspath(input_folder) == os.path.abspath(output_file):
+        raise ValueError("output cannot be the same as input")
     try:
         dat_files = []
         
@@ -119,7 +123,8 @@ def repack(input_folder, output_file):
         exit(1)
 
 def parse(input_file, output_file):
-
+    if os.path.abspath(input_file) == os.path.abspath(output_file):
+        raise ValueError("output cannot be the same as input")
     try:
         with open(args.output_file, 'w') as f:
             pass
@@ -278,7 +283,8 @@ def process_file(input_file, output_file):
         return f"file operating error: {str(e)}"
 
 def build(input_file, output_file):
-    
+    if os.path.abspath(input_file) == os.path.abspath(output_file):
+        raise ValueError("output cannot be the same as input")
     error = process_file(args.input_file, args.output_file)
     
     if error:
@@ -291,7 +297,7 @@ def build(input_file, output_file):
         print(f"MHi common data file build done")
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="MHi common package/data file unpack/repack/parse/build tool (v1.6)")
+    parser = argparse.ArgumentParser(description="MHi common package/data file unpack/repack/parse/build tool (v1.7)")
     subparsers = parser.add_subparsers(dest='command', required=True)
 
     unpack_parser = subparsers.add_parser('unpack', 
@@ -322,20 +328,12 @@ if __name__ == '__main__':
 
     try:
         if args.command == 'unpack':
-            if args.input_file == args.output_folder:
-                parser.error("output cannot be the same as input")
             unpack(args.input_file, args.output_folder)
         elif args.command == 'repack':
-            if args.input_folder == args.output_file:
-                parser.error("output cannot be the same as input")
             repack(args.input_folder, args.output_file)
         elif args.command == 'parse':
-            if args.input_file == args.output_file:
-                parser.error("output cannot be the same as input")
             parse(args.input_file, args.output_file)
         elif args.command == 'build':
-            if args.input_file == args.output_file:
-                parser.error("output cannot be the same as input")
             build(args.input_file, args.output_file)
     except Exception as e:
         print(f"EXIT: {str(e)}\n{traceback.format_exc()}")
