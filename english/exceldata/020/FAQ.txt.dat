@@ -1275,7 +1275,7 @@ Heat/Cold
 #COL_00FFFF
 Åü Heat Effect Halved
 #COL_FFFFFF
-Halves the time it takes for
+Doubles the time it takes for
 health to deplete in hot areas.
 
 #COL_00FFFF
@@ -1286,7 +1286,7 @@ Negates heat damage entirely.
 #COL_00FFFF
 Åü Cold Effect Halved
 #COL_FFFFFF
-Halves the time it takes for
+Doubles the time it takes for
 stamina to deplete in cold areas.
 
 #COL_00FFFF
