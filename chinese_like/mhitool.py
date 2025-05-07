@@ -190,7 +190,7 @@ def parse(input_file, output_file):
                             filtered_bytes = bytes([byte for byte in chunk if byte != 0x00])
                             if len(filtered_bytes) % 2 != 0:
                                 print(f"[警告] 列 {i+1} @ 行 {line_number}: "
-                                      f"有效数据的字节长度为奇数 ({len(filtered_bytes)}, 某些情况下可能会出现问题， 如有必要请使用单字节空格进行填充)")
+                                      f"有效数据的字节长度为奇数 ({len(filtered_bytes)}), 某些情况下可能会出现问题， 如有必要请使用单字节空格进行填充")
                             try:
                                 decoded_str = filtered_bytes.decode('shift-jis')
                                 S.append(decoded_str)
@@ -213,47 +213,38 @@ def validate_input_line(line):
     parts = line.strip().split('\t')
     if not parts:
         return None, "无效的输入文件格式: 找不到制表符分隔的内容"
-    
     n = len(parts)
     if n > 255:
         return None, "无效的输入文件格式: 总列数n大于255"
-    
     a_list = []
     b_list = []
-    
     for part in parts:
         try:
             a, b = part.split(',')
             a = int(a)
             b = int(b)
-            
             if a > 2:
                 return None, f"无效的输入文件格式: A值{a}大于2"
             if b == 0 or b > 255:
                 return None, f"无效的输入文件格式: B值{b}不在1-255范围内"
-            
             a_list.append(a)
             b_list.append(b)
         except ValueError:
             return None, f"无效的输入文件格式: '{part}'不是有效的A,B格式"
-    
     return (n, a_list, b_list), None
 
 def process_text_column(text, b, line_number, col_index):
     try:
         encoded_bytes = text.encode('shift-jis')
-        hex_str = encoded_bytes.hex().upper()
-        
-        if len(hex_str) > 2 * b:
+        if len(encoded_bytes) > b:
             return None, f"无效的输入文件格式: 行 {line_number} @ 列 {col_index+1} 的文本过长 (最大 {b} 字节)"
-        
-        if len(hex_str) <= 2 * b:
-            if len(hex_str) % 4 != 0:
-                print(f"[警告] 行 {line_number} @ 列 {col_index+1}: "
-                    f"有效数据的字节长度为奇数 ({len(hex_str)//2}, 某些情况下可能会出现问题， 如有必要请使用单字节空格进行填充)")
-            hex_str = hex_str.ljust(2 * b, '0')
-        
-        return hex_str, None
+        non_zero_bytes = [byte for byte in encoded_bytes if byte != 0x00]
+        if len(non_zero_bytes) % 2 != 0:
+            print(f"[警告] 行 {line_number} @ 列 {col_index+1}: "
+                  f"有效数据的字节长度为奇数 ({len(non_zero_bytes)}), 某些情况下可能会出现问题，如有必要请使用单字节空格进行填充")
+        if len(encoded_bytes) < b:
+            encoded_bytes += bytes([0x00] * (b - len(encoded_bytes)))
+        return encoded_bytes, None
     except UnicodeEncodeError:
         return None, f"无效的输入文件格式: 行 {line_number} @ 列 {col_index+1} 包含无效的 Shift-JIS 字符"
 
@@ -263,52 +254,38 @@ def process_file(input_file, output_file):
             first_line = infile.readline()
             if not first_line:
                 return "无效的输入文件格式: 文件为空"
-            
             result, error = validate_input_line(first_line)
             if error:
                 return error
-            
             n, a_list, b_list = result
-            
             outfile.write(bytes([n]))
             for a, b in zip(a_list, b_list):
                 outfile.write(bytes([a]))
                 outfile.write(bytes([b]))
-            
             line_number = 1
             for line in infile:
                 line_number += 1
                 line = line.strip('\n')
                 if not line:
                     break
-                
                 parts = line.split('\t')
                 if len(parts) != n:
                     return f"无效的输入文件格式: 行 {line_number} 期望得到 {n} 个列/元素, 实际得到 {len(parts)} 个列/元素"
-                
-                hex_data = []
                 for i, (text, a, b) in enumerate(zip(parts, a_list, b_list)):
                     if a == 2:
-                        hex_str, error = process_text_column(text, b, line_number, i)
+                        encoded_bytes, error = process_text_column(text, b, line_number, i)
                         if error:
                             return error
-                        hex_data.append(hex_str)
+                        outfile.write(encoded_bytes)
                     else:
                         if len(text) != 2 * b:
                             return f"无效的输入文件格式: 行 {line_number} @ 列 {i+1} 的期望字节长度: {2*b}, 实际字节长度: {len(text)}"
-                        
                         try:
-                            bytes.fromhex(text)
+                            hex_bytes = bytes.fromhex(text)
                         except ValueError:
                             return f"无效的输入文件格式: 行 {line_number} @ 列 {i+1} 包含非十六进制字符[0-9A-F]"
-                        
-                        hex_data.append(text.upper())
-                
-                for hex_str in hex_data:
-                    outfile.write(bytes.fromhex(hex_str))
-            
+                        outfile.write(hex_bytes)
             return None
-        
     except IOError as e:
         return f"文件操作错误: {str(e)}"
 
@@ -327,7 +304,7 @@ def build(input_file, output_file):
         print(f"MHi通用文件重构完毕")
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="MHi文件打包/解包/分析/重构工具 (v2.1)")
+    parser = argparse.ArgumentParser(description="MHi文件打包/解包/分析/重构工具 (v2.2)")
     subparsers = parser.add_subparsers(dest='command', required=True)
 
     unpack_parser = subparsers.add_parser('unpack', 

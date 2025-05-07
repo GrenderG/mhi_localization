@@ -190,7 +190,7 @@ def parse(input_file, output_file):
                             filtered_bytes = bytes([byte for byte in chunk if byte != 0x00])
                             if len(filtered_bytes) % 2 != 0:
                                 print(f"[WARNING] column {i+1} @ line {line_number}: "
-                                      f"non-zero data byte length is odd ({len(filtered_bytes)}, this may cause issue sometimes, use single-byte space for padding if necessary)")
+                                      f"non-zero data byte length is odd ({len(filtered_bytes)}), this may cause issue sometimes, use single-byte space for padding if necessary")
                             try:
                                 decoded_str = filtered_bytes.decode('shift-jis')
                                 S.append(decoded_str)
@@ -213,47 +213,38 @@ def validate_input_line(line):
     parts = line.strip().split('\t')
     if not parts:
         return None, "invalid input_file: cannot find any TAB(\t)"
-    
     n = len(parts)
     if n > 255:
         return None, "invalid input_file: too many columns (n>255)"
-    
     a_list = []
     b_list = []
-    
     for part in parts:
         try:
             a, b = part.split(',')
             a = int(a)
             b = int(b)
-            
             if a > 2:
                 return None, f"invalid input_file: A{a}>2"
             if b == 0 or b > 255:
                 return None, f"invalid input_file: B{b} not in range [1-255]"
-            
             a_list.append(a)
             b_list.append(b)
         except ValueError:
             return None, f"invalid input_file: '{part}' is not a valid [A,B] format"
-    
     return (n, a_list, b_list), None
 
 def process_text_column(text, b, line_number, col_index):
     try:
         encoded_bytes = text.encode('shift-jis')
-        hex_str = encoded_bytes.hex().upper()
-        
-        if len(hex_str) > 2 * b:
+        if len(encoded_bytes) > b:
             return None, f"invalid input_file: line {line_number} @ column {col_index+1} string too long (max: {b} bytes)"
-        
-        if len(hex_str) <= 2 * b:
-            if len(hex_str) % 4 != 0:
-                print(f"[WARNING] line {line_number} @ column {col_index+1}: "
-                    f"non-zero byte length is odd ({len(hex_str)//2}, this may cause issue sometimes, use single-byte space for padding if necessary)")
-            hex_str = hex_str.ljust(2 * b, '0')
-        
-        return hex_str, None
+        non_zero_bytes = [byte for byte in encoded_bytes if byte != 0x00]
+        if len(non_zero_bytes) % 2 != 0:
+            print(f"[WARNING] line {line_number} @ column {col_index+1}: "
+                  f"non-zero byte length is odd ({len(non_zero_bytes)}), this may cause issue sometimes, use single-byte space for padding if necessary")
+        if len(encoded_bytes) < b:
+            encoded_bytes += bytes([0x00] * (b - len(encoded_bytes)))
+        return encoded_bytes, None
     except UnicodeEncodeError:
         return None, f"invalid input_file: line {line_number} @ column {col_index+1} contains invalid Shift-JIS characters"
 
@@ -263,52 +254,38 @@ def process_file(input_file, output_file):
             first_line = infile.readline()
             if not first_line:
                 return "invalid input_file: empty file"
-            
             result, error = validate_input_line(first_line)
             if error:
                 return error
-            
             n, a_list, b_list = result
-            
             outfile.write(bytes([n]))
             for a, b in zip(a_list, b_list):
                 outfile.write(bytes([a]))
                 outfile.write(bytes([b]))
-            
             line_number = 1
             for line in infile:
                 line_number += 1
                 line = line.strip('\n')
                 if not line:
                     break
-                
                 parts = line.split('\t')
                 if len(parts) != n:
                     return f"invalid input_file: line {line_number} expected {n} columns, got {len(parts)}"
-                
-                hex_data = []
                 for i, (text, a, b) in enumerate(zip(parts, a_list, b_list)):
                     if a == 2:
-                        hex_str, error = process_text_column(text, b, line_number, i)
+                        encoded_bytes, error = process_text_column(text, b, line_number, i)
                         if error:
                             return error
-                        hex_data.append(hex_str)
+                        outfile.write(encoded_bytes)
                     else:
                         if len(text) != 2 * b:
                             return f"invalid input_file: line {line_number} @ column {i+1} expected byte length: {2*b}, actual byte length: {len(text)}"
-                        
                         try:
-                            bytes.fromhex(text)
+                            hex_bytes = bytes.fromhex(text)
                         except ValueError:
                             return f"invalid input_file: line {line_number} @ column {i+1} contains non HEX[0-9A-F] character"
-                        
-                        hex_data.append(text.upper())
-                
-                for hex_str in hex_data:
-                    outfile.write(bytes.fromhex(hex_str))
-            
+                        outfile.write(hex_bytes)
             return None
-        
     except IOError as e:
         return f"file operating error: {str(e)}"
 
@@ -327,7 +304,7 @@ def build(input_file, output_file):
         print(f"MHi common data file build done")
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="MHi common package/data file unpack/repack/parse/build tool (v2.1)")
+    parser = argparse.ArgumentParser(description="MHi common package/data file unpack/repack/parse/build tool (v2.2)")
     subparsers = parser.add_subparsers(dest='command', required=True)
 
     unpack_parser = subparsers.add_parser('unpack', 
