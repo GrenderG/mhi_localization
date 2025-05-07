@@ -172,9 +172,11 @@ def parse(input_file, output_file):
 
             f_in.seek(2 * p + 1)
             iterations = remaining // C
+            line_number = 1
             
             with open(output_file, 'a', encoding='utf-8') as f_out:
                 for _ in range(iterations):
+                    line_number += 1
                     S = []
                     for i in range(p):
                         b = B[i]
@@ -186,6 +188,9 @@ def parse(input_file, output_file):
                         
                         if A[i] == 2:
                             filtered_bytes = bytes([byte for byte in chunk if byte != 0x00])
+                            if len(filtered_bytes) % 2 != 0:
+                                print(f"[WARNING] column {i+1} @ line {line_number}: "
+                                      f"non-zero data byte length is odd ({len(filtered_bytes)}, this may cause issue sometimes, use single-byte space for padding if necessary)")
                             try:
                                 decoded_str = filtered_bytes.decode('shift-jis')
                                 S.append(decoded_str)
@@ -240,14 +245,17 @@ def process_text_column(text, b, line_number, col_index):
         hex_str = encoded_bytes.hex().upper()
         
         if len(hex_str) > 2 * b:
-            return None, f"invalid input_file: column {col_index+1} text too long (max {b} bytes, line {line_number})"
+            return None, f"invalid input_file: line {line_number} @ column {col_index+1} string too long (max: {b} bytes)"
         
-        if len(hex_str) < 2 * b:
+        if len(hex_str) <= 2 * b:
+            if len(hex_str) % 4 != 0:
+                print(f"[WARNING] line {line_number} @ column {col_index+1}: "
+                    f"non-zero byte length is odd ({len(hex_str)//2}, this may cause issue sometimes, use single-byte space for padding if necessary)")
             hex_str = hex_str.ljust(2 * b, '0')
         
         return hex_str, None
     except UnicodeEncodeError:
-        return None, f"invalid input_file: column {col_index+1} contains invalid Shift-JIS characters (line {line_number})"
+        return None, f"invalid input_file: line {line_number} @ column {col_index+1} contains invalid Shift-JIS characters"
 
 def process_file(input_file, output_file):
     try:
@@ -276,7 +284,7 @@ def process_file(input_file, output_file):
                 
                 parts = line.split('\t')
                 if len(parts) != n:
-                    return f"invalid input_file: expected {n} columns, got {len(parts)} (line {line_number})"
+                    return f"invalid input_file: line {line_number} expected {n} columns, got {len(parts)}"
                 
                 hex_data = []
                 for i, (text, a, b) in enumerate(zip(parts, a_list, b_list)):
@@ -287,12 +295,12 @@ def process_file(input_file, output_file):
                         hex_data.append(hex_str)
                     else:
                         if len(text) != 2 * b:
-                            return f"invalid input_file: column {i+1} expected byte length: {2*b}, actual byte length: {len(text)} (line {line_number})"
+                            return f"invalid input_file: line {line_number} @ column {i+1} expected byte length: {2*b}, actual byte length: {len(text)}"
                         
                         try:
                             bytes.fromhex(text)
                         except ValueError:
-                            return f"invalid input_file: column {i+1} contains non HEX[0-9A-F] character (line {line_number})"
+                            return f"invalid input_file: line {line_number} @ column {i+1} contains non HEX[0-9A-F] character"
                         
                         hex_data.append(text.upper())
                 
@@ -319,7 +327,7 @@ def build(input_file, output_file):
         print(f"MHi common data file build done")
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="MHi common package/data file unpack/repack/parse/build tool (v2.0)")
+    parser = argparse.ArgumentParser(description="MHi common package/data file unpack/repack/parse/build tool (v2.1)")
     subparsers = parser.add_subparsers(dest='command', required=True)
 
     unpack_parser = subparsers.add_parser('unpack', 
