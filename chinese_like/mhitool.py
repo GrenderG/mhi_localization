@@ -126,10 +126,10 @@ def parse(input_file, output_file):
     if os.path.abspath(input_file) == os.path.abspath(output_file):
         raise ValueError("输入与输出不能相同")
     try:
-        with open(args.output_file, 'w') as f:
+        with open(output_file, 'w', encoding='utf-8') as f:
             pass
 
-        with open(args.input_file, 'rb') as f_in:
+        with open(input_file, 'rb') as f_in:
             p_byte = f_in.read(1)
             if not p_byte:
                 raise ValueError("无效的文件格式: 文件为空")
@@ -167,30 +167,40 @@ def parse(input_file, output_file):
 
             E = [f"{A[i]},{B[i]}" for i in range(p)]
             
-            with open(args.output_file, 'w') as f_out:
+            with open(output_file, 'w', encoding='utf-8') as f_out:
                 f_out.write("\t".join(E) + "\n")
 
             f_in.seek(2 * p + 1)
             iterations = remaining // C
             
-            with open(args.output_file, 'a') as f_out:
+            with open(output_file, 'a', encoding='utf-8') as f_out:
                 for _ in range(iterations):
                     S = []
-                    for b in B:
+                    for i in range(p):
+                        b = B[i]
                         chunk = f_in.read(b)
                         if len(chunk) != b:
-                            with open(args.output_file, 'w') as f:
+                            with open(output_file, 'w', encoding='utf-8') as f:
                                 pass
                             raise ValueError("无效的文件格式: 数据不完整")
                         
-                        hex_str = "".join([f"{byte:02X}" for byte in chunk])
-                        S.append(hex_str)
+                        if A[i] == 2:
+                            filtered_bytes = bytes([byte for byte in chunk if byte != 0x00])
+                            try:
+                                decoded_str = filtered_bytes.decode('shift-jis')
+                                S.append(decoded_str)
+                            except UnicodeDecodeError:
+                                hex_str = "".join([f"{byte:02X}" for byte in filtered_bytes])
+                                S.append(hex_str)
+                        else:
+                            hex_str = "".join([f"{byte:02X}" for byte in chunk])
+                            S.append(hex_str)
                     
                     f_out.write("\t".join(S) + "\n")
         print("MHi通用文件格式解析完毕")
     except Exception as e:
         print(f"[分析错误] {str(e)}\n追踪: {traceback.format_exc()}")
-        with open(args.output_file, 'w') as f:
+        with open(output_file, 'w', encoding='utf-8') as f:
             pass
         return
 
@@ -224,29 +234,24 @@ def validate_input_line(line):
     
     return (n, a_list, b_list), None
 
-def validate_hex_line(line, expected_n, b_values):
-    parts = line.strip().split('\t')
-    if len(parts) != expected_n:
-        return None, f"无效的输入文件格式: 期望{expected_n}个十六进制字符串, 实际得到{len(parts)}个"
-    
-    hex_data = []
-    
-    for i, (part, b) in enumerate(zip(parts, b_values)):
-        if len(part) != 2 * b:
-            return None, f"无效的输入文件格式: 字符串'{part}'长度应为{2*b} , 实际为{len(part)}"
+def process_text_column(text, b, line_number, col_index):
+    try:
+        encoded_bytes = text.encode('shift-jis')
+        hex_str = encoded_bytes.hex().upper()
         
-        try:
-            bytes.fromhex(part)
-        except ValueError:
-            return None, f"无效的输入文件格式: 字符串'{part}'包含非十六进制字符"
+        if len(hex_str) > 2 * b:
+            return None, f"无效的输入文件格式: 列 {col_index+1} 的文本过长 (最大 {b} 字节, 位于行 {line_number})"
         
-        hex_data.append(part)
-    
-    return hex_data, None
+        if len(hex_str) < 2 * b:
+            hex_str = hex_str.ljust(2 * b, '0')
+        
+        return hex_str, None
+    except UnicodeEncodeError:
+        return None, f"无效的输入文件格式: 列 {col_index+1} 包含无效的 Shift-JIS 字符 (位于行 {line_number})"
 
 def process_file(input_file, output_file):
     try:
-        with open(input_file, 'r') as infile, open(output_file, 'wb') as outfile:
+        with open(input_file, 'r', encoding='utf-8') as infile, open(output_file, 'wb') as outfile:
             first_line = infile.readline()
             if not first_line:
                 return "无效的输入文件格式: 文件为空"
@@ -258,7 +263,6 @@ def process_file(input_file, output_file):
             n, a_list, b_list = result
             
             outfile.write(bytes([n]))
-            
             for a, b in zip(a_list, b_list):
                 outfile.write(bytes([a]))
                 outfile.write(bytes([b]))
@@ -266,13 +270,31 @@ def process_file(input_file, output_file):
             line_number = 1
             for line in infile:
                 line_number += 1
-                line = line.strip()
+                line = line.strip('\n')
                 if not line:
                     break
                 
-                hex_data, error = validate_hex_line(line, n, b_list)
-                if error:
-                    return f"{error} (第{line_number}行)"
+                parts = line.split('\t')
+                if len(parts) != n:
+                    return f"无效的输入文件格式: 期望得到 {n} 个列/元素, 实际得到 {len(parts)} 个列/元素 (位于行 {line_number})"
+                
+                hex_data = []
+                for i, (text, a, b) in enumerate(zip(parts, a_list, b_list)):
+                    if a == 2:
+                        hex_str, error = process_text_column(text, b, line_number, i)
+                        if error:
+                            return error
+                        hex_data.append(hex_str)
+                    else:
+                        if len(text) != 2 * b:
+                            return f"无效的输入文件格式: 列 {i+1} 的期望字节长度: {2*b}, 实际字节长度: {len(text)} (位于行 {line_number})"
+                        
+                        try:
+                            bytes.fromhex(text)
+                        except ValueError:
+                            return f"无效的输入文件格式: 列 {i+1} 包含非十六进制字符[0-9A-F] (位于行 {line_number})"
+                        
+                        hex_data.append(text.upper())
                 
                 for hex_str in hex_data:
                     outfile.write(bytes.fromhex(hex_str))
@@ -285,11 +307,11 @@ def process_file(input_file, output_file):
 def build(input_file, output_file):
     if os.path.abspath(input_file) == os.path.abspath(output_file):
         raise ValueError("输入与输出不能相同")
-    error = process_file(args.input_file, args.output_file)
+    error = process_file(input_file, output_file)
     
     if error:
-        if os.path.exists(args.output_file):
-            os.remove(args.output_file)
+        if os.path.exists(output_file):
+            os.remove(output_file)
         print(f"[重构错误]: {error}")
         print("无效的输入文件格式")
         exit(1)
@@ -297,7 +319,7 @@ def build(input_file, output_file):
         print(f"MHi通用文件重构完毕")
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="MHi文件打包/解包/分析/重构工具 (v1.7)")
+    parser = argparse.ArgumentParser(description="MHi文件打包/解包/分析/重构工具 (v2.0)")
     subparsers = parser.add_subparsers(dest='command', required=True)
 
     unpack_parser = subparsers.add_parser('unpack', 
