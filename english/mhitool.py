@@ -303,8 +303,48 @@ def build(input_file, output_file):
     else:
         print(f"MHi common data file build done")
 
+def splitsp(input_file, output_folder):
+    if not os.path.exists(input_file):
+        print(f"[splitsp error]: file {input_file} does not exist")
+        exit(1)
+
+    file_size = os.path.getsize(input_file)
+    print(f"detected file size: {file_size} byte(s)")
+
+    if file_size not in [56320, 56384]:
+        print("[splitsp error]: SP file size must be 56320 or 56384 bytes")
+        exit(1)
+
+    output_files = [
+        "00_pcx_gard_yy.dat",
+        "01_gard_yy.dat",
+        "02_arm_xxx.dat",
+        "03_m_pcx.dat",
+        "04_savedata.dat"
+    ]
+
+    skip_bytes = 32 if file_size == 56320 else 96
+    sizes = [14336, 7600, 1500, 28400, 1500]
+
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+        print(f"output folder created: {output_folder}")
+
+    with open(input_file, "rb") as f:
+        f.seek(skip_bytes)
+        for i, size in enumerate(sizes):
+            data = f.read(size)
+            if len(data) != size:
+                print(f"[WARNING]: data read from offset {f.tell()} is less than {size} bytes, actual size: {len(data)} bytes")
+            output_path = os.path.join(output_folder, output_files[i])
+            with open(output_path, "wb") as out_f:
+                out_f.write(data)
+            print(f"written to {output_path} ({len(data)} bytes)")
+
+    print("split SP file done")
+
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="MHi common package/data file unpack/repack/parse/build tool (v2.2)")
+    parser = argparse.ArgumentParser(description="MHi common package/data file unpack/repack/parse/build/splitsp tool (v2.3)")
     subparsers = parser.add_subparsers(dest='command', required=True)
 
     unpack_parser = subparsers.add_parser('unpack', 
@@ -331,6 +371,13 @@ if __name__ == '__main__':
     build_parser.add_argument('input_file', help='text file which output file will be build from')
     build_parser.add_argument('output_file', help='output MHi common data file')
 
+    splitsp_parser = subparsers.add_parser('splitsp', 
+        help='split MHi SP file to destination folder',
+        description='try to split SP file to destination folder by hardcoded offset value')
+    splitsp_parser.add_argument('input_file', help='input MHi SP file')
+    splitsp_parser.add_argument('output_folder', help='output folder for split files')
+
+
     args = parser.parse_args()
 
     try:
@@ -342,6 +389,8 @@ if __name__ == '__main__':
             parse(args.input_file, args.output_file)
         elif args.command == 'build':
             build(args.input_file, args.output_file)
+        elif args.command == 'splitsp':
+            splitsp(args.input_file, args.output_folder)
     except Exception as e:
         print(f"EXIT: {str(e)}\n{traceback.format_exc()}")
         exit(1)

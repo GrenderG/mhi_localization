@@ -303,8 +303,48 @@ def build(input_file, output_file):
     else:
         print(f"MHi通用文件重构完毕")
 
+def splitsp(input_file, output_folder):
+    if not os.path.exists(input_file):
+        print(f"错误: 文件 {input_file} 不存在。")
+        exit(1)
+
+    file_size = os.path.getsize(input_file)
+    print(f"检测到文件大小: {file_size} 字节")
+
+    if file_size not in [56320, 56384]:
+        print("错误: SP文件大小必须为 56320 或 56384 字节。")
+        exit(1)
+
+    output_files = [
+        "00_pcx_gard_yy.dat",
+        "01_gard_yy.dat",
+        "02_arm_xxx.dat",
+        "03_m_pcx.dat",
+        "04_savedata.dat"
+    ]
+
+    skip_bytes = 32 if file_size == 56320 else 96
+    sizes = [14336, 7600, 1500, 28400, 1500]
+
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+        print(f"已创建输出目录: {output_folder}")
+
+    with open(input_file, "rb") as f:
+        f.seek(skip_bytes)
+        for i, size in enumerate(sizes):
+            data = f.read(size)
+            if len(data) != size:
+                print(f"警告: 从偏移 {f.tell()} 读取的数据不足 {size} 字节，实际读取 {len(data)} 字节")
+            output_path = os.path.join(output_folder, output_files[i])
+            with open(output_path, "wb") as out_f:
+                out_f.write(data)
+            print(f"已写入 {output_path} ({len(data)} 字节)")
+
+    print("SP文件拆分完成。")
+
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="MHi文件打包/解包/分析/重构工具 (v2.2)")
+    parser = argparse.ArgumentParser(description="MHi文件打包/解包/分析/重构工具 (v2.3)")
     subparsers = parser.add_subparsers(dest='command', required=True)
 
     unpack_parser = subparsers.add_parser('unpack', 
@@ -331,6 +371,12 @@ if __name__ == '__main__':
     build_parser.add_argument('input_file', help='含有效信息的待重构文本文件')
     build_parser.add_argument('output_file', help='重构后的MHi通用文件输出文件路径')
 
+    splitsp_parser = subparsers.add_parser('splitsp', 
+        help='拆分MHi SP文件到指定文件夹',
+        description='尝试将MHi使用的SP文件拆分到指定目录')
+    splitsp_parser.add_argument('input_file', help='输入的MHi SP文件路径')
+    splitsp_parser.add_argument('output_folder', help='拆分输出的目标文件夹路径')
+
     args = parser.parse_args()
 
     try:
@@ -342,6 +388,8 @@ if __name__ == '__main__':
             parse(args.input_file, args.output_file)
         elif args.command == 'build':
             build(args.input_file, args.output_file)
+        elif args.command == 'splitsp':
+            splitsp(args.input_file, args.output_folder)
     except Exception as e:
         print(f"程序终止: {str(e)}\n{traceback.format_exc()}")
         exit(1)
